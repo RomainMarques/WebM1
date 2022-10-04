@@ -8,29 +8,11 @@
             <div id="cmdcur">
             Ma commande:
             </div>
-            <div id="cmd">
-                <div id="depart">
-                    date départ:
-                    <font-awesome-icon icon="fa-solid fa-train-subway" />
-                    <div id="saisir">
-                        a saisir
-                    </div>
-                </div>
-                <div id='arrivee'>
-                    date arrivée:
-                    <font-awesome-icon icon="fa-solid fa-train-subway" />
-                    <div id="saisir">
-                        a saisir
-                    </div>
-                </div>
-                <div id="prix">
-                    prix:
-                    <font-awesome-icon icon="fa-solid fa-train-subway" />
-                    <div id="saisir">
-                        a saisir
-                    </div>
-                </div>
-            </div>
+            <detail-command>
+                <template #depart> a saisir </template>
+                <template #arrivee> a saisir </template>
+                <template #prix> a saisir </template>
+            </detail-command>
         </div>
         <div id="commander">
             <button id="clickV">Valider</button>
@@ -39,11 +21,12 @@
 </template>
 
 <script>
+import DetailCommand from './DetailCommand.vue'
 
 export default {
     name : 'InProcess',
     components : {
-
+        DetailCommand
     }
 }
 
@@ -52,7 +35,7 @@ export default {
 <style scoped>
     #panier {
         text-align: center;
-        font-size: 200%;
+        font-size: xxx-large;
         color:blueviolet;
         margin-top: 2%;
     }
@@ -61,22 +44,7 @@ export default {
         margin-top: 2%;
         font-style: italic;
         margin-bottom: 2%;
-    }
-    #cmd {
-        display: flex;
-        background-color: rgb(16, 80, 241);
-    }
-    #depart {
-        margin-left : 5%
-    }
-    #arrivee {
-        margin-left: 33%;
-    }
-    #prix {
-        margin-left: 25%;
-    }
-    #saisir {
-        margin-top : 55%
+        font-size: x-large;
     }
     #commander {
         text-align: right;
