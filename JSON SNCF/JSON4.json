@@ -1,0 +1,2852 @@
+{
+    "pagination": {
+        "start_page": 0,
+        "items_on_page": 1,
+        "items_per_page": 10,
+        "total_result": 1
+    },
+    "links": [
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/stop_points\/{stop_point.id}",
+            "type": "stop_point",
+            "rel": "stop_points",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/commercial_modes\/{commercial_modes.id}",
+            "type": "commercial_modes",
+            "rel": "commercial_modes",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/vehicle_journeys\/{vehicle_journey.id}",
+            "type": "vehicle_journey",
+            "rel": "vehicle_journeys",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/physical_modes\/{physical_modes.id}",
+            "type": "physical_modes",
+            "rel": "physical_modes",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/routes\/{route.id}",
+            "type": "route",
+            "rel": "routes",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/physical_modes\/{physical_mode.id}",
+            "type": "physical_mode",
+            "rel": "physical_modes",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/commercial_modes\/{commercial_mode.id}",
+            "type": "commercial_mode",
+            "rel": "commercial_modes",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/networks\/{network.id}",
+            "type": "network",
+            "rel": "networks",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/lines\/{line.id}",
+            "type": "line",
+            "rel": "lines",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/stop_areas\/{stop_area.id}",
+            "type": "stop_area",
+            "rel": "stop_areas",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/stop_areas\/stop_area:SNCF:87677252\/route_schedules",
+            "type": "first",
+            "templated": false
+        }
+    ],
+    "disruptions": [],
+    "notes": [
+        {
+            "category": "terminus",
+            "type": "notes",
+            "id": "destination:18154448807789923402",
+            "value": "Avallon"
+        }
+    ],
+    "feed_publishers": [
+        {
+            "url": "",
+            "id": "sncf",
+            "license": "Private (unspecified)",
+            "name": "SNCF PIV Production"
+        },
+        {
+            "url": "",
+            "id": "SNCF:sncf-piv",
+            "license": "Private (unspecified)",
+            "name": "SNCF PIV Production"
+        }
+    ],
+    "context": {
+        "timezone": "Europe\/Paris",
+        "current_datetime": "20220927T101457"
+    },
+    "exceptions": [],
+    "route_schedules": [
+        {
+            "display_informations": {
+                "direction": "Auxerre Saint-Gervais (Auxerre)",
+                "code": "",
+                "network": "TER",
+                "links": [],
+                "color": "",
+                "label": "Laroche Migennes - Avallon",
+                "commercial_mode": "TER",
+                "text_color": "",
+                "name": "Laroche Migennes - Avallon"
+            },
+            "table": {
+                "headers": [
+                    {
+                        "display_informations": {
+                            "direction": "Avallon (Avallon)",
+                            "code": "",
+                            "description": "",
+                            "links": [],
+                            "color": "",
+                            "physical_mode": "Autocar",
+                            "headsign": "31905",
+                            "commercial_mode": "",
+                            "equipments": [],
+                            "trip_short_name": "31905",
+                            "text_color": "",
+                            "network": "",
+                            "name": ""
+                        },
+                        "additional_informations": [
+                            "regular"
+                        ],
+                        "links": [
+                            {
+                                "type": "vehicle_journey",
+                                "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                            },
+                            {
+                                "type": "physical_mode",
+                                "id": "physical_mode:Coach"
+                            }
+                        ]
+                    },
+                    {
+                        "display_informations": {
+                            "direction": "Auxerre Saint-Gervais (Auxerre)",
+                            "code": "",
+                            "description": "",
+                            "links": [],
+                            "color": "",
+                            "physical_mode": "Autocar",
+                            "headsign": "31906",
+                            "commercial_mode": "",
+                            "equipments": [],
+                            "trip_short_name": "31906",
+                            "text_color": "",
+                            "network": "",
+                            "name": ""
+                        },
+                        "additional_informations": [
+                            "regular"
+                        ],
+                        "links": [
+                            {
+                                "type": "vehicle_journey",
+                                "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                            },
+                            {
+                                "type": "physical_mode",
+                                "id": "physical_mode:Coach"
+                            }
+                        ]
+                    },
+                    {
+                        "display_informations": {
+                            "direction": "Avallon (Avallon)",
+                            "code": "",
+                            "description": "",
+                            "links": [],
+                            "color": "",
+                            "physical_mode": "Autocar",
+                            "headsign": "31909",
+                            "commercial_mode": "",
+                            "equipments": [],
+                            "trip_short_name": "31909",
+                            "text_color": "",
+                            "network": "",
+                            "name": ""
+                        },
+                        "additional_informations": [
+                            "regular"
+                        ],
+                        "links": [
+                            {
+                                "type": "vehicle_journey",
+                                "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                            },
+                            {
+                                "type": "physical_mode",
+                                "id": "physical_mode:Coach"
+                            }
+                        ]
+                    },
+                    {
+                        "display_informations": {
+                            "direction": "Auxerre Saint-Gervais (Auxerre)",
+                            "code": "",
+                            "description": "",
+                            "links": [],
+                            "color": "",
+                            "physical_mode": "Autocar",
+                            "headsign": "31912",
+                            "commercial_mode": "",
+                            "equipments": [],
+                            "trip_short_name": "31912",
+                            "text_color": "",
+                            "network": "",
+                            "name": ""
+                        },
+                        "additional_informations": [
+                            "regular"
+                        ],
+                        "links": [
+                            {
+                                "type": "vehicle_journey",
+                                "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                            },
+                            {
+                                "type": "physical_mode",
+                                "id": "physical_mode:Coach"
+                            }
+                        ]
+                    },
+                    {
+                        "display_informations": {
+                            "direction": "Avallon (Avallon)",
+                            "code": "",
+                            "description": "",
+                            "links": [],
+                            "color": "",
+                            "physical_mode": "Autocar",
+                            "headsign": "31915",
+                            "commercial_mode": "",
+                            "equipments": [],
+                            "trip_short_name": "31915",
+                            "text_color": "",
+                            "network": "",
+                            "name": ""
+                        },
+                        "additional_informations": [
+                            "regular"
+                        ],
+                        "links": [
+                            {
+                                "type": "vehicle_journey",
+                                "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                            },
+                            {
+                                "type": "physical_mode",
+                                "id": "physical_mode:Coach"
+                            }
+                        ]
+                    },
+                    {
+                        "display_informations": {
+                            "direction": "Auxerre Saint-Gervais (Auxerre)",
+                            "code": "",
+                            "description": "",
+                            "links": [],
+                            "color": "",
+                            "physical_mode": "Autocar",
+                            "headsign": "31900",
+                            "commercial_mode": "",
+                            "equipments": [],
+                            "trip_short_name": "31900",
+                            "text_color": "",
+                            "network": "",
+                            "name": ""
+                        },
+                        "additional_informations": [
+                            "regular"
+                        ],
+                        "links": [
+                            {
+                                "type": "vehicle_journey",
+                                "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                            },
+                            {
+                                "type": "physical_mode",
+                                "id": "physical_mode:Coach"
+                            }
+                        ]
+                    }
+                ],
+                "rows": [
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Avallon",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.495755",
+                                "lon": "3.912446"
+                            },
+                            "label": "Avallon (Avallon)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89025",
+                                    "name": "Avallon",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.4885365",
+                                        "lon": "3.9070658"
+                                    },
+                                    "label": "Avallon (89200)",
+                                    "id": "admin:fr:89025",
+                                    "zip_code": "89200"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683789:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683789"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683789"
+                                    }
+                                ],
+                                "name": "Avallon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.495755",
+                                    "lon": "3.912446"
+                                },
+                                "label": "Avallon (Avallon)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89025",
+                                        "name": "Avallon",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.4885365",
+                                            "lon": "3.9070658"
+                                        },
+                                        "label": "Avallon (89200)",
+                                        "id": "admin:fr:89025",
+                                        "zip_code": "89200"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683789"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T142200",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T142200",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T183400",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T183400",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220928T062600",
+                                "additional_informations": [],
+                                "base_date_time": "20220928T062600",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Sermizelles - V\u00e9zelay",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.528881",
+                                "lon": "3.792672"
+                            },
+                            "label": "Sermizelles - V\u00e9zelay (Givry)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89190",
+                                    "name": "Givry",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.520172",
+                                        "lon": "3.7948394"
+                                    },
+                                    "label": "Givry (89200)",
+                                    "id": "admin:fr:89190",
+                                    "zip_code": "89200"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683722:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683722"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683722"
+                                    }
+                                ],
+                                "name": "Sermizelles - V\u00e9zelay",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.528881",
+                                    "lon": "3.792672"
+                                },
+                                "label": "Sermizelles - V\u00e9zelay (Givry)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89190",
+                                        "name": "Givry",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.520172",
+                                            "lon": "3.7948394"
+                                        },
+                                        "label": "Givry (89200)",
+                                        "id": "admin:fr:89190",
+                                        "zip_code": "89200"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683722"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T143300",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T143300",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T184500",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T184500",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220928T063700",
+                                "additional_informations": [],
+                                "base_date_time": "20220928T063700",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Voutenay-sur-Cure Place Mairie",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.561729",
+                                "lon": "3.784688"
+                            },
+                            "label": "Voutenay-sur-Cure Place Mairie (Voutenay-sur-Cure)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89485",
+                                    "name": "Voutenay-sur-Cure",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.5626135",
+                                        "lon": "3.7857843"
+                                    },
+                                    "label": "Voutenay-sur-Cure (89270)",
+                                    "id": "admin:fr:89485",
+                                    "zip_code": "89270"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87677195:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87677195"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87677195"
+                                    }
+                                ],
+                                "name": "Voutenay-sur-Cure Place Mairie",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.561729",
+                                    "lon": "3.784688"
+                                },
+                                "label": "Voutenay-sur-Cure Place Mairie (Voutenay-sur-Cure)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89485",
+                                        "name": "Voutenay-sur-Cure",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.5626135",
+                                            "lon": "3.7857843"
+                                        },
+                                        "label": "Voutenay-sur-Cure (89270)",
+                                        "id": "admin:fr:89485",
+                                        "zip_code": "89270"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87677195"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T143800",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T143800",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T185000",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T185000",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220928T064200",
+                                "additional_informations": [],
+                                "base_date_time": "20220928T064200",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Arcy-sur-Cure",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.600873",
+                                "lon": "3.766638"
+                            },
+                            "label": "Arcy-sur-Cure (Arcy-sur-Cure)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89015",
+                                    "name": "Arcy-sur-Cure",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.6034437",
+                                        "lon": "3.7584901"
+                                    },
+                                    "label": "Arcy-sur-Cure (89270)",
+                                    "id": "admin:fr:89015",
+                                    "zip_code": "89270"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683680:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683680"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683680"
+                                    }
+                                ],
+                                "name": "Arcy-sur-Cure",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.600873",
+                                    "lon": "3.766638"
+                                },
+                                "label": "Arcy-sur-Cure (Arcy-sur-Cure)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89015",
+                                        "name": "Arcy-sur-Cure",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.6034437",
+                                            "lon": "3.7584901"
+                                        },
+                                        "label": "Arcy-sur-Cure (89270)",
+                                        "id": "admin:fr:89015",
+                                        "zip_code": "89270"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683680"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T144400",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T144400",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T185600",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T185600",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220928T064800",
+                                "additional_informations": [],
+                                "base_date_time": "20220928T064800",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Lucy-sur-Cure D606",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.627783",
+                                "lon": "3.744664"
+                            },
+                            "label": "Lucy-sur-Cure D606 (Lucy-sur-Cure)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89233",
+                                    "name": "Lucy-sur-Cure",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.628864",
+                                        "lon": "3.7432227"
+                                    },
+                                    "label": "Lucy-sur-Cure (89270)",
+                                    "id": "admin:fr:89233",
+                                    "zip_code": "89270"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87677245:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87677245"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87677245"
+                                    }
+                                ],
+                                "name": "Lucy-sur-Cure D606",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.627783",
+                                    "lon": "3.744664"
+                                },
+                                "label": "Lucy-sur-Cure D606 (Lucy-sur-Cure)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89233",
+                                        "name": "Lucy-sur-Cure",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.628864",
+                                            "lon": "3.7432227"
+                                        },
+                                        "label": "Lucy-sur-Cure (89270)",
+                                        "id": "admin:fr:89233",
+                                        "zip_code": "89270"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87677245"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T144600",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T144600",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T185800",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T185800",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220928T065000",
+                                "additional_informations": [],
+                                "base_date_time": "20220928T065000",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Vermenton",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.660761",
+                                "lon": "3.732059"
+                            },
+                            "label": "Vermenton (Vermenton)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89441",
+                                    "name": "Vermenton",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.6639483",
+                                        "lon": "3.7352814"
+                                    },
+                                    "label": "Vermenton (89270)",
+                                    "id": "admin:fr:89441",
+                                    "zip_code": "89270"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683664:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683664"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683664"
+                                    }
+                                ],
+                                "name": "Vermenton",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.660761",
+                                    "lon": "3.732059"
+                                },
+                                "label": "Vermenton (Vermenton)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89441",
+                                        "name": "Vermenton",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.6639483",
+                                            "lon": "3.7352814"
+                                        },
+                                        "label": "Vermenton (89270)",
+                                        "id": "admin:fr:89441",
+                                        "zip_code": "89270"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683664"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T144900",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T144900",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T190100",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T190100",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220928T065300",
+                                "additional_informations": [],
+                                "base_date_time": "20220928T065300",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Accolay Le Pont",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.663798",
+                                "lon": "3.709584"
+                            },
+                            "label": "Accolay Le Pont (Deux Rivi\u00e8res)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89130",
+                                    "name": "Deux Rivi\u00e8res",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.6839847",
+                                        "lon": "3.6898895"
+                                    },
+                                    "label": "Deux Rivi\u00e8res",
+                                    "id": "admin:fr:89130",
+                                    "zip_code": ""
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87677252:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87677252"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87677252"
+                                    }
+                                ],
+                                "name": "Accolay Le Pont",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.663798",
+                                    "lon": "3.709584"
+                                },
+                                "label": "Accolay Le Pont (Deux Rivi\u00e8res)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89130",
+                                        "name": "Deux Rivi\u00e8res",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.6839847",
+                                            "lon": "3.6898895"
+                                        },
+                                        "label": "Deux Rivi\u00e8res",
+                                        "id": "admin:fr:89130",
+                                        "zip_code": ""
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87677252"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T150000",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T150000",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T191100",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T191100",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220928T070400",
+                                "additional_informations": [],
+                                "base_date_time": "20220928T070400",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Vincelles",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.704204",
+                                "lon": "3.628471"
+                            },
+                            "label": "Vincelles (Vincelles)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89478",
+                                    "name": "Vincelles",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.70379",
+                                        "lon": "3.6307"
+                                    },
+                                    "label": "Vincelles (89290)",
+                                    "id": "admin:fr:89478",
+                                    "zip_code": "89290"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683631:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683631"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683631"
+                                    }
+                                ],
+                                "name": "Vincelles",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.704204",
+                                    "lon": "3.628471"
+                                },
+                                "label": "Vincelles (Vincelles)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89478",
+                                        "name": "Vincelles",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.70379",
+                                            "lon": "3.6307"
+                                        },
+                                        "label": "Vincelles (89290)",
+                                        "id": "admin:fr:89478",
+                                        "zip_code": "89290"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683631"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T151000",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T151000",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T192100",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T192100",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220928T071400",
+                                "additional_informations": [],
+                                "base_date_time": "20220928T071400",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Auxerre Saint-Gervais",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.797645",
+                                "lon": "3.58514"
+                            },
+                            "label": "Auxerre Saint-Gervais (Auxerre)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89024",
+                                    "name": "Auxerre",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.7961287",
+                                        "lon": "3.570579"
+                                    },
+                                    "label": "Auxerre (89000)",
+                                    "id": "admin:fr:89024",
+                                    "zip_code": "89000"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683573:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683573"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683573"
+                                    }
+                                ],
+                                "name": "Auxerre Saint-Gervais",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.797645",
+                                    "lon": "3.58514"
+                                },
+                                "label": "Auxerre Saint-Gervais (Auxerre)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89024",
+                                        "name": "Auxerre",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.7961287",
+                                            "lon": "3.570579"
+                                        },
+                                        "label": "Auxerre (89000)",
+                                        "id": "admin:fr:89024",
+                                        "zip_code": "89000"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683573"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "20220927T102600",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T102600",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "20220927T152500",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T152500",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31906:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "20220927T173000",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T173000",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "20220927T193600",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T193600",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31912:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "20220927T203000",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T203000",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "20220928T072900",
+                                "additional_informations": [],
+                                "base_date_time": "20220928T072900",
+                                "links": [
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-28:31900:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Vincelles",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.704204",
+                                "lon": "3.628471"
+                            },
+                            "label": "Vincelles (Vincelles)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89478",
+                                    "name": "Vincelles",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.70379",
+                                        "lon": "3.6307"
+                                    },
+                                    "label": "Vincelles (89290)",
+                                    "id": "admin:fr:89478",
+                                    "zip_code": "89290"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683631:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683631"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683631"
+                                    }
+                                ],
+                                "name": "Vincelles",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.704204",
+                                    "lon": "3.628471"
+                                },
+                                "label": "Vincelles (Vincelles)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89478",
+                                        "name": "Vincelles",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.70379",
+                                            "lon": "3.6307"
+                                        },
+                                        "label": "Vincelles (89290)",
+                                        "id": "admin:fr:89478",
+                                        "zip_code": "89290"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683631"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "20220927T104100",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T104100",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T174500",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T174500",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T204500",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T204500",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Accolay Le Pont",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.663798",
+                                "lon": "3.709584"
+                            },
+                            "label": "Accolay Le Pont (Deux Rivi\u00e8res)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89130",
+                                    "name": "Deux Rivi\u00e8res",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.6839847",
+                                        "lon": "3.6898895"
+                                    },
+                                    "label": "Deux Rivi\u00e8res",
+                                    "id": "admin:fr:89130",
+                                    "zip_code": ""
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87677252:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87677252"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87677252"
+                                    }
+                                ],
+                                "name": "Accolay Le Pont",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.663798",
+                                    "lon": "3.709584"
+                                },
+                                "label": "Accolay Le Pont (Deux Rivi\u00e8res)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89130",
+                                        "name": "Deux Rivi\u00e8res",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.6839847",
+                                            "lon": "3.6898895"
+                                        },
+                                        "label": "Deux Rivi\u00e8res",
+                                        "id": "admin:fr:89130",
+                                        "zip_code": ""
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87677252"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "20220927T105100",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T105100",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T175500",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T175500",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T205500",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T205500",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Vermenton",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.660761",
+                                "lon": "3.732059"
+                            },
+                            "label": "Vermenton (Vermenton)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89441",
+                                    "name": "Vermenton",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.6639483",
+                                        "lon": "3.7352814"
+                                    },
+                                    "label": "Vermenton (89270)",
+                                    "id": "admin:fr:89441",
+                                    "zip_code": "89270"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683664:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683664"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683664"
+                                    }
+                                ],
+                                "name": "Vermenton",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.660761",
+                                    "lon": "3.732059"
+                                },
+                                "label": "Vermenton (Vermenton)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89441",
+                                        "name": "Vermenton",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.6639483",
+                                            "lon": "3.7352814"
+                                        },
+                                        "label": "Vermenton (89270)",
+                                        "id": "admin:fr:89441",
+                                        "zip_code": "89270"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683664"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "20220927T110200",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T110200",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T180500",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T180500",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T210600",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T210600",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Lucy-sur-Cure D606",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.627783",
+                                "lon": "3.744664"
+                            },
+                            "label": "Lucy-sur-Cure D606 (Lucy-sur-Cure)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89233",
+                                    "name": "Lucy-sur-Cure",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.628864",
+                                        "lon": "3.7432227"
+                                    },
+                                    "label": "Lucy-sur-Cure (89270)",
+                                    "id": "admin:fr:89233",
+                                    "zip_code": "89270"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87677245:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87677245"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87677245"
+                                    }
+                                ],
+                                "name": "Lucy-sur-Cure D606",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.627783",
+                                    "lon": "3.744664"
+                                },
+                                "label": "Lucy-sur-Cure D606 (Lucy-sur-Cure)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89233",
+                                        "name": "Lucy-sur-Cure",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.628864",
+                                            "lon": "3.7432227"
+                                        },
+                                        "label": "Lucy-sur-Cure (89270)",
+                                        "id": "admin:fr:89233",
+                                        "zip_code": "89270"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87677245"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "20220927T110500",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T110500",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T180800",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T180800",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T210900",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T210900",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Arcy-sur-Cure",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.600873",
+                                "lon": "3.766638"
+                            },
+                            "label": "Arcy-sur-Cure (Arcy-sur-Cure)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89015",
+                                    "name": "Arcy-sur-Cure",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.6034437",
+                                        "lon": "3.7584901"
+                                    },
+                                    "label": "Arcy-sur-Cure (89270)",
+                                    "id": "admin:fr:89015",
+                                    "zip_code": "89270"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683680:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683680"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683680"
+                                    }
+                                ],
+                                "name": "Arcy-sur-Cure",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.600873",
+                                    "lon": "3.766638"
+                                },
+                                "label": "Arcy-sur-Cure (Arcy-sur-Cure)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89015",
+                                        "name": "Arcy-sur-Cure",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.6034437",
+                                            "lon": "3.7584901"
+                                        },
+                                        "label": "Arcy-sur-Cure (89270)",
+                                        "id": "admin:fr:89015",
+                                        "zip_code": "89270"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683680"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "20220927T110700",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T110700",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T181000",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T181000",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T211100",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T211100",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Voutenay-sur-Cure Place Mairie",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.561729",
+                                "lon": "3.784688"
+                            },
+                            "label": "Voutenay-sur-Cure Place Mairie (Voutenay-sur-Cure)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89485",
+                                    "name": "Voutenay-sur-Cure",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.5626135",
+                                        "lon": "3.7857843"
+                                    },
+                                    "label": "Voutenay-sur-Cure (89270)",
+                                    "id": "admin:fr:89485",
+                                    "zip_code": "89270"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87677195:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87677195"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87677195"
+                                    }
+                                ],
+                                "name": "Voutenay-sur-Cure Place Mairie",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.561729",
+                                    "lon": "3.784688"
+                                },
+                                "label": "Voutenay-sur-Cure Place Mairie (Voutenay-sur-Cure)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89485",
+                                        "name": "Voutenay-sur-Cure",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.5626135",
+                                            "lon": "3.7857843"
+                                        },
+                                        "label": "Voutenay-sur-Cure (89270)",
+                                        "id": "admin:fr:89485",
+                                        "zip_code": "89270"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87677195"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "20220927T111300",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T111300",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T181600",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T181600",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T211700",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T211700",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Sermizelles - V\u00e9zelay",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.528881",
+                                "lon": "3.792672"
+                            },
+                            "label": "Sermizelles - V\u00e9zelay (Givry)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89190",
+                                    "name": "Givry",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.520172",
+                                        "lon": "3.7948394"
+                                    },
+                                    "label": "Givry (89200)",
+                                    "id": "admin:fr:89190",
+                                    "zip_code": "89200"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683722:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683722"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683722"
+                                    }
+                                ],
+                                "name": "Sermizelles - V\u00e9zelay",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.528881",
+                                    "lon": "3.792672"
+                                },
+                                "label": "Sermizelles - V\u00e9zelay (Givry)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89190",
+                                        "name": "Givry",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.520172",
+                                            "lon": "3.7948394"
+                                        },
+                                        "label": "Givry (89200)",
+                                        "id": "admin:fr:89190",
+                                        "zip_code": "89200"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683722"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "20220927T111800",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T111800",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T182100",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T182100",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T212200",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T212200",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            }
+                        ]
+                    },
+                    {
+                        "stop_point": {
+                            "commercial_modes": [
+                                {
+                                    "id": "commercial_mode:TER",
+                                    "name": "TER"
+                                }
+                            ],
+                            "name": "Avallon",
+                            "links": [],
+                            "physical_modes": [
+                                {
+                                    "id": "physical_mode:Coach",
+                                    "name": "Autocar"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "47.495755",
+                                "lon": "3.912446"
+                            },
+                            "label": "Avallon (Avallon)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "89025",
+                                    "name": "Avallon",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "47.4885365",
+                                        "lon": "3.9070658"
+                                    },
+                                    "label": "Avallon (89200)",
+                                    "id": "admin:fr:89025",
+                                    "zip_code": "89200"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87683789:Coach",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87683789"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87683789"
+                                    }
+                                ],
+                                "name": "Avallon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.495755",
+                                    "lon": "3.912446"
+                                },
+                                "label": "Avallon (Avallon)",
+                                "administrative_regions": [
+                                    {
+                                        "insee": "89025",
+                                        "name": "Avallon",
+                                        "level": 8,
+                                        "coord": {
+                                            "lat": "47.4885365",
+                                            "lon": "3.9070658"
+                                        },
+                                        "label": "Avallon (89200)",
+                                        "id": "admin:fr:89025",
+                                        "zip_code": "89200"
+                                    }
+                                ],
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87683789"
+                            }
+                        },
+                        "date_times": [
+                            {
+                                "date_time": "20220927T112900",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T112900",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31905:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T183200",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T183200",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31909:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            },
+                            {
+                                "date_time": "20220927T213300",
+                                "additional_informations": [],
+                                "base_date_time": "20220927T213300",
+                                "links": [
+                                    {
+                                        "category": "terminus",
+                                        "internal": true,
+                                        "rel": "notes",
+                                        "type": "notes",
+                                        "id": "destination:18154448807789923402"
+                                    },
+                                    {
+                                        "type": "vehicle_journey",
+                                        "value": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach",
+                                        "rel": "vehicle_journeys",
+                                        "id": "vehicle_journey:SNCF:2022-09-27:31915:1187:Coach"
+                                    }
+                                ],
+                                "data_freshness": "base_schedule"
+                            },
+                            {
+                                "date_time": "",
+                                "additional_informations": [],
+                                "links": [],
+                                "data_freshness": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            "additional_informations": null,
+            "geojson": {
+                "type": "MultiLineString",
+                "coordinates": []
+            },
+            "links": [
+                {
+                    "type": "line",
+                    "id": "line:SNCF:FR:Line::82F900E6-8684-48AD-91E2-B0BB06BF82F9:"
+                },
+                {
+                    "type": "route",
+                    "id": "route:SNCF:FR:Line::82F900E6-8684-48AD-91E2-B0BB06BF82F9:"
+                },
+                {
+                    "type": "commercial_mode",
+                    "id": "commercial_mode:TER"
+                },
+                {
+                    "type": "network",
+                    "id": "network:SNCF:TER"
+                }
+            ]
+        }
+    ]
+}

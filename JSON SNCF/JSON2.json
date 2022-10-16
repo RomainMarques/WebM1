@@ -1,0 +1,112 @@
+{
+    "pagination": {
+        "start_page": 0,
+        "items_on_page": 19,
+        "items_per_page": 25,
+        "total_result": 19
+    },
+    "commercial_modes": [
+        {
+            "id": "commercial_mode:DBS",
+            "name": "DB SNCF"
+        },
+        {
+            "id": "commercial_mode:ELI",
+            "name": "RENFE SNCF"
+        },
+        {
+            "id": "commercial_mode:EUROSTAR",
+            "name": "Eurostar"
+        },
+        {
+            "id": "commercial_mode:FR:Branding::6dfb1ec4-50b5-42a8-a531-a792b1ea6f2e:",
+            "name": "TER HDF"
+        },
+        {
+            "id": "commercial_mode:FR:Branding::a80c322c-12b1-4273-9413-e2df5dd6dce8:",
+            "name": "LEX"
+        },
+        {
+            "id": "commercial_mode:IC",
+            "name": "Intercit\u00e9s"
+        },
+        {
+            "id": "commercial_mode:ICN",
+            "name": "Intercit\u00e9s de nuit"
+        },
+        {
+            "id": "commercial_mode:LYR",
+            "name": "TGV Lyria"
+        },
+        {
+            "id": "commercial_mode:OUI",
+            "name": "TGV INOUI"
+        },
+        {
+            "id": "commercial_mode:OUIGO_TC",
+            "name": "OUIGO Train Classique"
+        },
+        {
+            "id": "commercial_mode:SNF",
+            "name": "SNCF"
+        },
+        {
+            "id": "commercial_mode:TER",
+            "name": "TER"
+        },
+        {
+            "id": "commercial_mode:TGV",
+            "name": "TGV"
+        },
+        {
+            "id": "commercial_mode:TGVOUIGO",
+            "name": "OUIGO"
+        },
+        {
+            "id": "commercial_mode:THA",
+            "name": "Thalys"
+        },
+        {
+            "id": "commercial_mode:TN",
+            "name": "TRANSILIEN"
+        },
+        {
+            "id": "commercial_mode:TNNOC",
+            "name": "Noctilien"
+        },
+        {
+            "id": "commercial_mode:TNRER",
+            "name": "RER"
+        },
+        {
+            "id": "commercial_mode:additional_service",
+            "name": "additional service"
+        }
+    ],
+    "links": [
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/commercial_modes\/{commercial_modes.id}",
+            "type": "commercial_modes",
+            "rel": "commercial_modes",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/commercial_modes",
+            "type": "first",
+            "templated": false
+        }
+    ],
+    "disruptions": [],
+    "feed_publishers": [
+        {
+            "url": "",
+            "id": "sncf",
+            "license": "Private (unspecified)",
+            "name": "SNCF PIV Production"
+        }
+    ],
+    "context": {
+        "timezone": "Europe\/Paris",
+        "current_datetime": "20220927T085355"
+    }
+}

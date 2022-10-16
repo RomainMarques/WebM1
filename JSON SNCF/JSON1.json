@@ -1,0 +1,707 @@
+{
+    "tickets": [],
+    "terminus": [
+        {
+            "codes": [
+                {
+                    "type": "secondary_id",
+                    "value": "SNCF:87686030"
+                },
+                {
+                    "type": "secondary_id",
+                    "value": "SNCF:87758581"
+                },
+                {
+                    "type": "source",
+                    "value": "87686006"
+                },
+                {
+                    "type": "source",
+                    "value": "87686030"
+                },
+                {
+                    "type": "source",
+                    "value": "87758581"
+                },
+                {
+                    "type": "uic",
+                    "value": "87686006"
+                },
+                {
+                    "type": "uic",
+                    "value": "87686030"
+                },
+                {
+                    "type": "uic",
+                    "value": "87758581"
+                }
+            ],
+            "name": "Paris Gare de Lyon Hall 1 &2",
+            "links": [],
+            "coord": {
+                "lat": "48.844945",
+                "lon": "2.373481"
+            },
+            "label": "Paris Gare de Lyon Hall 1 &2 (Paris)",
+            "timezone": "Europe\/Paris",
+            "id": "stop_area:SNCF:87686006"
+        }
+    ],
+    "links": [
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/journeys?to=admin%3Afr%3A69123&datetime_represents=departure&from=admin%3Afr%3A75056&datetime=20220927T085201",
+            "type": "next",
+            "rel": "next",
+            "templated": false
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/journeys?to=admin%3Afr%3A69123&datetime_represents=arrival&from=admin%3Afr%3A75056&datetime=20220927T104659",
+            "type": "prev",
+            "rel": "prev",
+            "templated": false
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/journeys?to=admin%3Afr%3A69123&datetime_represents=departure&from=admin%3Afr%3A75056&datetime=20220927T000000",
+            "type": "first",
+            "rel": "first",
+            "templated": false
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/journeys?to=admin%3Afr%3A69123&datetime_represents=arrival&from=admin%3Afr%3A75056&datetime=20220927T235959",
+            "type": "last",
+            "rel": "last",
+            "templated": false
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/stop_points\/{stop_point.id}",
+            "type": "stop_point",
+            "rel": "stop_points",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/stop_areas\/{stop_area.id}",
+            "type": "stop_area",
+            "rel": "stop_areas",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/vehicle_journeys\/{vehicle_journey.id}",
+            "type": "vehicle_journey",
+            "rel": "vehicle_journeys",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/routes\/{route.id}",
+            "type": "route",
+            "rel": "routes",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/commercial_modes\/{commercial_mode.id}",
+            "type": "commercial_mode",
+            "rel": "commercial_modes",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/lines\/{line.id}",
+            "type": "line",
+            "rel": "lines",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/physical_modes\/{physical_mode.id}",
+            "type": "physical_mode",
+            "rel": "physical_modes",
+            "templated": true
+        },
+        {
+            "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/networks\/{network.id}",
+            "type": "network",
+            "rel": "networks",
+            "templated": true
+        }
+    ],
+    "journeys": [
+        {
+            "status": "",
+            "distances": {
+                "taxi": 0,
+                "car": 0,
+                "walking": 0,
+                "bike": 0,
+                "ridesharing": 0
+            },
+            "links": [
+                {
+                    "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/journeys?first_section_mode%5B%5D=walking&direct_path=none&to=admin%3Afr%3A69123&is_journey_schedules=True&datetime=20220927T085200&last_section_mode%5B%5D=walking&min_nb_journeys=5&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3ASNCF%3A87723197%3ALongDistanceTrain&allowed_id%5B%5D=stop_point%3ASNCF%3A87686006%3ALongDistanceTrain&from=admin%3Afr%3A75056",
+                    "type": "journeys",
+                    "rel": "same_journey_schedules",
+                    "templated": false
+                },
+                {
+                    "href": "https:\/\/api.sncf.com\/v1\/coverage\/sncf\/journeys?count=1&first_section_mode%5B%5D=walking&direct_path=none&to=admin%3Afr%3A69123&is_journey_schedules=True&datetime=20220927T085200&last_section_mode%5B%5D=walking&min_nb_journeys=1&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3ASNCF%3A87723197%3ALongDistanceTrain&allowed_id%5B%5D=stop_point%3ASNCF%3A87686006%3ALongDistanceTrain&from=admin%3Afr%3A75056",
+                    "type": "journeys",
+                    "rel": "this_journey",
+                    "templated": false
+                }
+            ],
+            "tags": [
+                "walking",
+                "reliable",
+                "ecologic"
+            ],
+            "nb_transfers": 0,
+            "durations": {
+                "taxi": 0,
+                "walking": 0,
+                "car": 0,
+                "ridesharing": 0,
+                "bike": 0,
+                "total": 6900
+            },
+            "arrival_date_time": "20220927T104700",
+            "calendars": [
+                {
+                    "active_periods": [
+                        {
+                            "begin": "20220927",
+                            "end": "20220928"
+                        }
+                    ],
+                    "week_pattern": {
+                        "monday": false,
+                        "tuesday": true,
+                        "friday": false,
+                        "wednesday": false,
+                        "thursday": false,
+                        "sunday": false,
+                        "saturday": false
+                    }
+                }
+            ],
+            "departure_date_time": "20220927T085200",
+            "requested_date_time": "20220927T083706",
+            "fare": {
+                "found": false,
+                "total": {
+                    "value": "0.0"
+                },
+                "links": []
+            },
+            "co2_emission": {
+                "value": 922.53344,
+                "unit": "gEC"
+            },
+            "type": "best",
+            "duration": 6900,
+            "sections": [
+                {
+                    "from": {
+                        "embedded_type": "administrative_region",
+                        "quality": 0,
+                        "administrative_region": {
+                            "insee": "75056",
+                            "name": "Paris",
+                            "level": 8,
+                            "coord": {
+                                "lat": "48.8566969",
+                                "lon": "2.3514616"
+                            },
+                            "label": "Paris (75000-75116)",
+                            "id": "admin:fr:75056",
+                            "zip_code": "75000;75116"
+                        },
+                        "name": "Paris (75000-75116)",
+                        "id": "admin:fr:75056"
+                    },
+                    "links": [],
+                    "arrival_date_time": "20220927T085200",
+                    "co2_emission": {
+                        "value": 0.0,
+                        "unit": ""
+                    },
+                    "to": {
+                        "embedded_type": "stop_point",
+                        "stop_point": {
+                            "name": "Paris Gare de Lyon Hall 1 &2",
+                            "links": [],
+                            "coord": {
+                                "lat": "48.844945",
+                                "lon": "2.373481"
+                            },
+                            "label": "Paris Gare de Lyon Hall 1 &2 (Paris)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "75056",
+                                    "name": "Paris",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "48.8566969",
+                                        "lon": "2.3514616"
+                                    },
+                                    "label": "Paris (75000-75116)",
+                                    "id": "admin:fr:75056",
+                                    "zip_code": "75000;75116"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87686006:LongDistanceTrain",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "secondary_id",
+                                        "value": "SNCF:87686030"
+                                    },
+                                    {
+                                        "type": "secondary_id",
+                                        "value": "SNCF:87758581"
+                                    },
+                                    {
+                                        "type": "source",
+                                        "value": "87686006"
+                                    },
+                                    {
+                                        "type": "source",
+                                        "value": "87686030"
+                                    },
+                                    {
+                                        "type": "source",
+                                        "value": "87758581"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87686006"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87686030"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87758581"
+                                    }
+                                ],
+                                "name": "Paris Gare de Lyon Hall 1 &2",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.844945",
+                                    "lon": "2.373481"
+                                },
+                                "label": "Paris Gare de Lyon Hall 1 &2 (Paris)",
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87686006"
+                            }
+                        },
+                        "quality": 0,
+                        "name": "Paris Gare de Lyon Hall 1 &2 (Paris)",
+                        "id": "stop_point:SNCF:87686006:LongDistanceTrain"
+                    },
+                    "departure_date_time": "20220927T085200",
+                    "geojson": {
+                        "type": "LineString",
+                        "properties": [
+                            {
+                                "length": 2075
+                            }
+                        ],
+                        "coordinates": [
+                            [
+                                2.3514616,
+                                48.8566969
+                            ],
+                            [
+                                2.373481,
+                                48.844945
+                            ]
+                        ]
+                    },
+                    "duration": 0,
+                    "type": "crow_fly",
+                    "id": "HTDW3Nux5nUX2tARvVnZKJ_0",
+                    "mode": "walking"
+                },
+                {
+                    "from": {
+                        "embedded_type": "stop_point",
+                        "stop_point": {
+                            "name": "Paris Gare de Lyon Hall 1 &2",
+                            "links": [],
+                            "coord": {
+                                "lat": "48.844945",
+                                "lon": "2.373481"
+                            },
+                            "label": "Paris Gare de Lyon Hall 1 &2 (Paris)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "75056",
+                                    "name": "Paris",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "48.8566969",
+                                        "lon": "2.3514616"
+                                    },
+                                    "label": "Paris (75000-75116)",
+                                    "id": "admin:fr:75056",
+                                    "zip_code": "75000;75116"
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87686006:LongDistanceTrain",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "secondary_id",
+                                        "value": "SNCF:87686030"
+                                    },
+                                    {
+                                        "type": "secondary_id",
+                                        "value": "SNCF:87758581"
+                                    },
+                                    {
+                                        "type": "source",
+                                        "value": "87686006"
+                                    },
+                                    {
+                                        "type": "source",
+                                        "value": "87686030"
+                                    },
+                                    {
+                                        "type": "source",
+                                        "value": "87758581"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87686006"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87686030"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87758581"
+                                    }
+                                ],
+                                "name": "Paris Gare de Lyon Hall 1 &2",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.844945",
+                                    "lon": "2.373481"
+                                },
+                                "label": "Paris Gare de Lyon Hall 1 &2 (Paris)",
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87686006"
+                            }
+                        },
+                        "quality": 0,
+                        "name": "Paris Gare de Lyon Hall 1 &2 (Paris)",
+                        "id": "stop_point:SNCF:87686006:LongDistanceTrain"
+                    },
+                    "links": [
+                        {
+                            "type": "vehicle_journey",
+                            "id": "vehicle_journey:SNCF:2022-09-27:6607:1187:LongDistanceTrain"
+                        },
+                        {
+                            "type": "line",
+                            "id": "line:SNCF:CSR:601100"
+                        },
+                        {
+                            "type": "route",
+                            "id": "route:SNCF:CSR:601100"
+                        },
+                        {
+                            "type": "commercial_mode",
+                            "id": "commercial_mode:OUI"
+                        },
+                        {
+                            "type": "physical_mode",
+                            "id": "physical_mode:LongDistanceTrain"
+                        },
+                        {
+                            "type": "network",
+                            "id": "network:SNCF:OUI"
+                        }
+                    ],
+                    "arrival_date_time": "20220927T104700",
+                    "additional_informations": [
+                        "regular"
+                    ],
+                    "co2_emission": {
+                        "value": 922.53344,
+                        "unit": "gEC"
+                    },
+                    "display_informations": {
+                        "direction": "Lyon Part Dieu (Lyon)",
+                        "code": "",
+                        "description": "",
+                        "links": [
+                            {
+                                "internal": true,
+                                "type": "stop_area",
+                                "id": "stop_area:SNCF:87686006",
+                                "rel": "terminus",
+                                "templated": false
+                            }
+                        ],
+                        "color": "",
+                        "physical_mode": "Train grande vitesse",
+                        "headsign": "6607",
+                        "commercial_mode": "TGV INOUI",
+                        "equipments": [],
+                        "trip_short_name": "6607",
+                        "label": "Paris Gare de Lyon Hall 1 &2 - Lyon Perrache",
+                        "text_color": "",
+                        "network": "TGV INOUI",
+                        "name": "Paris Gare de Lyon Hall 1 &2 - Lyon Perrache"
+                    },
+                    "to": {
+                        "embedded_type": "stop_point",
+                        "stop_point": {
+                            "name": "Lyon Part Dieu",
+                            "links": [],
+                            "coord": {
+                                "lat": "45.760596",
+                                "lon": "4.859409"
+                            },
+                            "label": "Lyon Part Dieu (Lyon)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "69123",
+                                    "name": "Lyon",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "45.7578137",
+                                        "lon": "4.8320114"
+                                    },
+                                    "label": "Lyon",
+                                    "id": "admin:fr:69123",
+                                    "zip_code": ""
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87723197:LongDistanceTrain",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87723197"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87723197"
+                                    }
+                                ],
+                                "name": "Lyon Part Dieu",
+                                "links": [],
+                                "coord": {
+                                    "lat": "45.760596",
+                                    "lon": "4.859409"
+                                },
+                                "label": "Lyon Part Dieu (Lyon)",
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87723197"
+                            }
+                        },
+                        "quality": 0,
+                        "name": "Lyon Part Dieu (Lyon)",
+                        "id": "stop_point:SNCF:87723197:LongDistanceTrain"
+                    },
+                    "base_arrival_date_time": "20220927T104700",
+                    "base_departure_date_time": "20220927T085200",
+                    "departure_date_time": "20220927T085200",
+                    "geojson": {
+                        "type": "LineString",
+                        "properties": [
+                            {
+                                "length": 390904
+                            }
+                        ],
+                        "coordinates": [
+                            [
+                                2.373481,
+                                48.844945
+                            ],
+                            [
+                                4.859409,
+                                45.760596
+                            ]
+                        ]
+                    },
+                    "duration": 6900,
+                    "type": "public_transport",
+                    "id": "section_0_0",
+                    "data_freshness": "base_schedule",
+                    "stop_date_times": [
+                        {
+                            "stop_point": {
+                                "name": "Paris Gare de Lyon Hall 1 &2",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.844945",
+                                    "lon": "2.373481"
+                                },
+                                "label": "Paris Gare de Lyon Hall 1 &2 (Paris)",
+                                "equipments": [],
+                                "id": "stop_point:SNCF:87686006:LongDistanceTrain"
+                            },
+                            "links": [],
+                            "arrival_date_time": "20220927T085200",
+                            "additional_informations": [],
+                            "departure_date_time": "20220927T085200",
+                            "base_arrival_date_time": "20220927T085200",
+                            "base_departure_date_time": "20220927T085200"
+                        },
+                        {
+                            "stop_point": {
+                                "name": "Lyon Part Dieu",
+                                "links": [],
+                                "coord": {
+                                    "lat": "45.760596",
+                                    "lon": "4.859409"
+                                },
+                                "label": "Lyon Part Dieu (Lyon)",
+                                "equipments": [],
+                                "id": "stop_point:SNCF:87723197:LongDistanceTrain"
+                            },
+                            "links": [],
+                            "arrival_date_time": "20220927T104700",
+                            "additional_informations": [],
+                            "departure_date_time": "20220927T104700",
+                            "base_arrival_date_time": "20220927T104700",
+                            "base_departure_date_time": "20220927T104700"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "embedded_type": "stop_point",
+                        "stop_point": {
+                            "name": "Lyon Part Dieu",
+                            "links": [],
+                            "coord": {
+                                "lat": "45.760596",
+                                "lon": "4.859409"
+                            },
+                            "label": "Lyon Part Dieu (Lyon)",
+                            "equipments": [],
+                            "administrative_regions": [
+                                {
+                                    "insee": "69123",
+                                    "name": "Lyon",
+                                    "level": 8,
+                                    "coord": {
+                                        "lat": "45.7578137",
+                                        "lon": "4.8320114"
+                                    },
+                                    "label": "Lyon",
+                                    "id": "admin:fr:69123",
+                                    "zip_code": ""
+                                }
+                            ],
+                            "id": "stop_point:SNCF:87723197:LongDistanceTrain",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "source",
+                                        "value": "87723197"
+                                    },
+                                    {
+                                        "type": "uic",
+                                        "value": "87723197"
+                                    }
+                                ],
+                                "name": "Lyon Part Dieu",
+                                "links": [],
+                                "coord": {
+                                    "lat": "45.760596",
+                                    "lon": "4.859409"
+                                },
+                                "label": "Lyon Part Dieu (Lyon)",
+                                "timezone": "Europe\/Paris",
+                                "id": "stop_area:SNCF:87723197"
+                            }
+                        },
+                        "quality": 0,
+                        "name": "Lyon Part Dieu (Lyon)",
+                        "id": "stop_point:SNCF:87723197:LongDistanceTrain"
+                    },
+                    "links": [],
+                    "arrival_date_time": "20220927T104700",
+                    "co2_emission": {
+                        "value": 0.0,
+                        "unit": ""
+                    },
+                    "to": {
+                        "embedded_type": "administrative_region",
+                        "quality": 0,
+                        "administrative_region": {
+                            "insee": "69123",
+                            "name": "Lyon",
+                            "level": 8,
+                            "coord": {
+                                "lat": "45.7578137",
+                                "lon": "4.8320114"
+                            },
+                            "label": "Lyon",
+                            "id": "admin:fr:69123",
+                            "zip_code": ""
+                        },
+                        "name": "Lyon",
+                        "id": "admin:fr:69123"
+                    },
+                    "departure_date_time": "20220927T104700",
+                    "geojson": {
+                        "type": "LineString",
+                        "properties": [
+                            {
+                                "length": 2148
+                            }
+                        ],
+                        "coordinates": [
+                            [
+                                4.859409,
+                                45.760596
+                            ],
+                            [
+                                4.8320114,
+                                45.7578137
+                            ]
+                        ]
+                    },
+                    "duration": 0,
+                    "type": "crow_fly",
+                    "id": "nMbzXkwEJ9Vwf5dLS9DAzT_0",
+                    "mode": "walking"
+                }
+            ]
+        }
+    ],
+    "disruptions": [],
+    "notes": [],
+    "feed_publishers": [
+        {
+            "url": "",
+            "id": "sncf",
+            "license": "Private (unspecified)",
+            "name": "SNCF PIV Production"
+        },
+        {
+            "url": "",
+            "id": "SNCF:sncf-piv",
+            "license": "Private (unspecified)",
+            "name": "SNCF PIV Production"
+        }
+    ],
+    "context": {
+        "timezone": "Europe\/Paris",
+        "current_datetime": "20220927T083932",
+        "car_direct_path": {
+            "co2_emission": {
+                "value": 97403.1729927853,
+                "unit": "gEC"
+            }
+        }
+    },
+    "exceptions": []
+}
