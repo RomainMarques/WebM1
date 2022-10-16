@@ -1,20 +1,25 @@
 <template>
-  <div>
-    <div>
+  <div class="main_content">
+    <div class="trip_content">
       <h2>Where do you want to go today ?</h2>
-      <div>Date : {{ i_date }}</div>
-      <form>
-        <select name="destinations" id="select_dest">
-          <option value="">--Destination--</option>
-          <option value="paris">Paris</option>
-          <option value="lyon">Lyon</option>
-        </select>
-        <input type="number" min="1" max="10" placeholder="Number of people" />
-        
-        <div class="form_date_departure">
-          <label>Departure</label>
-          <input type="date" v-model="i_date" id="datePicker" />
+
+      <form class="form_trip">
+        <div class="form_trip_content">
+          <select name="destinations" id="select_dest">
+            <option value="">--Destination--</option>
+            <option value="paris">Paris</option>
+            <option value="lyon">Lyon</option>
+          </select>
+
+          <input type="number" id="i_nbPeople" min="1" max="10" placeholder="Number of people" />
+          
+          <div class="form_date_departure">
+            <label>Departure</label>
+            <input type="date" v-model="i_date" id="datePicker" />
+          </div>
         </div>
+
+        <button type="submit">Travel !</button>
       </form>
 
       <div class="wrongDate" v-if="!isDateOk">Incorrect trip date !</div>
@@ -40,5 +45,34 @@ export default {
 </script>
 
 <style scoped>
+.main_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trip_content {
+  padding: 1em;
+  margin: 1em;
+  background-color: rgba(36,156,138,0.6);
+  width: 50%;
+  border-radius: 5px;
+}
+
+.trip_content, .form_trip, .form_date_departure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_trip_content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+
+#i_nbPeople, .form_date_departure {
+  margin-left: 1em;
+}
 
 </style>
