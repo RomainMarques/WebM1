@@ -15,7 +15,12 @@ const routes = [
     path: '/plan',
     name: 'Plan',
     component: () => import('../pages/Planify.vue')
-  }
+  },
+  {
+    path:'/testapi',
+    name:'TestApi',
+    component: () => import('../pages/TestApi.vue')
+  },
 ]
 
 const router = createRouter({
