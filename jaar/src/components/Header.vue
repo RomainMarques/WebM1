@@ -8,8 +8,6 @@
         </nav>
         <div class="user">
             <router-link v-if="signed" to="/logout">Se Déconnecter</router-link>
-            <router-link v-if="!signed" to="/login">Se Connecter</router-link>
-            <router-link v-if="!signed" to="/register">S'inscrire</router-link>
         </div>
     </header>
 </template>

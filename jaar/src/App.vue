@@ -1,20 +1,49 @@
 <template>
   <div id="main-content">
-    <Header/>
-    <router-view/>
-    <Footer/>
+    <div v-if="!signin">
+      <welcome-page
+        @signUp="signUp"
+        @signIn="signIn"
+      />
+    </div>
+    <div v-else>
+      <Header/>
+      <router-view/>
+      <Footer/>
+    </div>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import WelcomePage from './pages/WelcomePage.vue'
 export default {
   name: 'App',
+  data() {
+    return {
+      signin: false
+    }
+  },
   components: {
     Header,
-    Footer
-  }
+    Footer,
+    WelcomePage
+  },
+  methods: {
+    signUp(user) {
+      //TODO: send user to server
+      this.signin = true
+      this.$router.push({ name: 'Home' })
+      console.log(user)
+    },
+    signIn(user) {
+      //TODO: send user to server
+      this.signin = true
+      this.$router.push({ name: 'Home' })
+      console.log(user)
+    }
+  },
 }
 </script>
 

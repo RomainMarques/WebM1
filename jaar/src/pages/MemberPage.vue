@@ -1,6 +1,8 @@
 <template>
-    <in-process/>
-    <past-commands/>
+    <div>
+        <in-process/>
+        <past-commands/>
+    </div>
 </template>
 
 <script>
