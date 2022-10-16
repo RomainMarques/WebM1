@@ -5,11 +5,23 @@
 
       <form class="form_trip">
         <div class="form_trip_content">
-          <select name="destinations" id="select_dest">
-            <option value="">--Destination--</option>
-            <option value="paris">Paris</option>
-            <option value="lyon">Lyon</option>
-          </select>
+          <div class="form_trip_from">
+            <label>From</label>
+            <select name="destinations_from" id="select_from">
+              <option value="">--Destination--</option>
+              <option value="paris">Paris</option>
+              <option value="lyon">Lyon</option>
+            </select>
+          </div>
+
+          <div class="form_trip_to">
+            <label>To</label>
+            <select name="destinations_to" id="select_to">
+              <option value="">--Destination--</option>
+              <option value="paris">Paris</option>
+              <option value="lyon">Lyon</option>
+            </select>
+          </div>
 
           <input type="number" id="i_nbPeople" min="1" max="10" placeholder="Number of people" />
           
@@ -19,7 +31,7 @@
           </div>
         </div>
 
-        <button type="submit">Travel !</button>
+        <button type="submit" v-if="isDateOk">Travel !</button>
       </form>
 
       <div class="wrongDate" v-if="!isDateOk">Incorrect trip date !</div>
@@ -59,7 +71,7 @@ export default {
   border-radius: 5px;
 }
 
-.trip_content, .form_trip, .form_date_departure {
+.trip_content, .form_trip, .form_date_departure, .form_trip_from, .form_trip_to {
   display: flex;
   flex-direction: column;
   align-items: center;
