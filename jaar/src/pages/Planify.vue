@@ -11,7 +11,10 @@
         </select>
         <input type="number" min="1" max="10" placeholder="Number of people" />
         
-        <input type="date" v-model="i_date" id="datePicker" />
+        <div class="form_date_departure">
+          <label>Departure</label>
+          <input type="date" v-model="i_date" id="datePicker" />
+        </div>
       </form>
 
       <div class="wrongDate" v-if="!isDateOk">Incorrect trip date !</div>
