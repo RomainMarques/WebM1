@@ -23,7 +23,7 @@ export default {
   name: 'App',
   data() {
     return {
-      signin: true
+      signin: false
     }
   },
   components: {
@@ -35,13 +35,13 @@ export default {
     signUp(user) {
       //TODO: send user to server
       this.signin = true
-      this.$router.push({ name: 'Home' })
+      this.$router.push('/home')
       console.log(user)
     },
     signIn(user) {
       //TODO: send user to server
       this.signin = true
-      this.$router.push({ name: 'Home' })
+      this.$router.push('/home')
       console.log(user)
     },
 
