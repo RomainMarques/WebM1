@@ -36,7 +36,20 @@
 
       <div class="wrongDate" v-if="!isDateOk">Incorrect trip date !</div>
     </div>
-    {{ train }}
+
+    <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date">
+      <div class="train_index" v-if="isTripDone">
+        {{ index }}
+      </div>
+      <div class="train_duration" v-if="isTripDone">
+        {{ item.duration }}
+      </div>
+      <div class="train_dates" v-if="isTripDone">
+        {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
+      </div>
+    </div>
+
+    {{ trains }}
   </div>
 </template>
 
@@ -52,28 +65,39 @@ export default {
         s_from: "",
         s_to: "",
         i_nbP: "",
-        train: null
+        trains: null,
+        done: false
       }
     },
     computed: {
       isDateOk() {
         return this.i_date >= moment(new Date()).format("YYYY-MM-DD")
+      },
+      isTripDone() {
+        return this.done
       }
     },
     methods: {
       async getAllTrainOfDay(){
-            var dateFormatted = this.i_date.replace(/-/g,'') // YYYY-MM-DD -> YYYYMMDD
-            this.train = "Veuillez patienter... (C'est très long)"
+        var dateFormatted = this.i_date.replace(/-/g,'') // YYYY-MM-DD -> YYYYMMDD
+        this.trains = "Veuillez patienter... (C'est très long)"
 
-            getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{
-                this.train = res;
-            })
-        },
+        getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{
+            this.trains = res.journeys;
+        }).then(()=>{
+          this.done = true;
+        })
+      },
       async getTrain(dep, arr, date) {
-          return await getTrain(dep, arr, date);
+        return await getTrain(dep, arr, date);
       },
       onSubmit() {
         
+      },
+      onlyHours(fullDate) {
+        if(this.isTripDone && fullDate != undefined) {
+          return fullDate.slice(9, 13);
+        }
       }
     }
 };
@@ -108,6 +132,12 @@ export default {
 
 #i_nbPeople, .form_date_departure {
   margin-left: 1em;
+}
+
+.train_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 </style>
