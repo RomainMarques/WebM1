@@ -83,7 +83,9 @@ export default {
     },
     methods: {
       async getAllTrainOfDay(){
-        var dateFormatted = this.i_date.replace(/-/g,'') // YYYY-MM-DD -> YYYYMMDD
+        var currentHour = new Date().getHours()
+        var currentMinute = new Date().getMinutes()
+        var dateFormatted = this.i_date.replace(/-/g,'') + "T" + currentHour + currentMinute // YYYY-MM-DD -> YYYYMMDD
         this.trains = "Veuillez patienter... (C'est très long)"
 
         getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{

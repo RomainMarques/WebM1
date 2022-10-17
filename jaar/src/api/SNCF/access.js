@@ -41,7 +41,7 @@ export const getAllTrainsDay = async (departure,arrival,date) => {
             //replace last char in lastTrainTime by 1
             const lastTrainTimeDate = lastTrainTime.substring(0,lastTrainTime.length - 1) + "1";
             let isLastTrain = false;
-            let actualDate = date + "T000000"
+            let actualDate = date
             while (!isLastTrain) {
                 await getTrain(departure,arrival,actualDate).then((res) => {
                     if (res.status === 200) {
