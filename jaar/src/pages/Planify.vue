@@ -208,7 +208,11 @@ export default {
 }
 
 .train_dd {
-  margin-left: 1em;
+  margin-left: 34%;
+}
+#buy {
+  color: beige;
+  margin-left: 40%;
 }
 
 </style>
