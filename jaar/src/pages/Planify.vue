@@ -37,18 +37,22 @@
       <div class="wrongDate" v-if="!isDateOk">Incorrect trip date !</div>
     </div>
 
-    <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date">
-      <div class="train_index" v-if="isTripDone">
-        {{ index }}
-      </div>
-      <div class="train_duration" v-if="isTripDone">
-        {{ item.duration }}
-      </div>
-      <div class="train_dates" v-if="isTripDone">
-        {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
+    <div class="main_train_content" v-if="isTripDone">
+      <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date">
+        <div class="train_index" v-if="isTripDone">
+          {{ index + 1 }}
+        </div>
+        <div class="train_dd">
+          <div class="train_duration" v-if="isTripDone">
+            Durée : {{ formatDuration(item.duration) }}
+          </div>
+          <div class="train_dates" v-if="isTripDone">
+            {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
+          </div>
+        </div>
       </div>
     </div>
-
+    
     {{ trains }}
   </div>
 </template>
@@ -96,8 +100,13 @@ export default {
       },
       onlyHours(fullDate) {
         if(this.isTripDone && fullDate != undefined) {
-          return fullDate.slice(9, 13);
+          var hours = fullDate.slice(9, 11) + ":" + fullDate.slice(11, 13)
+          return hours
         }
+      },
+      formatDuration(dur) {
+        if(this.isTripDone && dur != undefined)
+          return moment.utc(dur*1000).format("HH:mm")
       }
     }
 };
@@ -134,10 +143,30 @@ export default {
   margin-left: 1em;
 }
 
+.main_train_content {
+  background-color: rgba(250,131,82,0.5);
+  width: 60%;
+  border-radius: 5px;
+}
+
 .train_content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid rgba(43, 43, 43, 0.5);
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.train_index {
+  font-size: xx-large;
+  width: 2.5em;
+  color: white;
+}
+
+.train_dd {
+  margin-left: 1em;
 }
 
 </style>
