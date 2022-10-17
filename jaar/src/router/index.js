@@ -21,6 +21,11 @@ const routes = [
     name:'ApiTest',
     component: () => import('../pages/ApiTest.vue')
   },
+  {
+    path:'/trip/:id',
+    name:'Trip',
+    component: () => import('../components/Trip.vue')
+  }
 ]
 
 const router = createRouter({
