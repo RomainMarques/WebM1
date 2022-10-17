@@ -18,8 +18,8 @@ const routes = [
   },
   {
     path:'/testapi',
-    name:'TestApi',
-    component: () => import('../pages/TestApi.vue')
+    name:'ApiTest',
+    component: () => import('../pages/ApiTest.vue')
   },
 ]
 
