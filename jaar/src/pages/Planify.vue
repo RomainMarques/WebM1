@@ -3,27 +3,27 @@
     <div class="trip_content">
       <h2>Where do you want to go today ?</h2>
 
-      <form class="form_trip">
+      <form class="form_trip" @submit.prevent="onSubmit">
         <div class="form_trip_content">
           <div class="form_trip_from">
             <label>From</label>
-            <select name="destinations_from" id="select_from">
-              <option value="">--Destination--</option>
-              <option value="paris">Paris</option>
-              <option value="lyon">Lyon</option>
+            <select v-model="s_from" name="destinations_from" id="select_from">
+              <option disabled value="">--Destination--</option>
+              <option value="admin:fr:75056">Paris</option>
+              <option value="admin:fr:69123">Lyon</option>
             </select>
           </div>
 
           <div class="form_trip_to">
             <label>To</label>
-            <select name="destinations_to" id="select_to">
-              <option value="">--Destination--</option>
-              <option value="paris">Paris</option>
-              <option value="lyon">Lyon</option>
+            <select v-model="s_to" name="destinations_to" id="select_to">
+              <option disabled value="">--Destination--</option>
+              <option value="admin:fr:75056">Paris</option>
+              <option value="admin:fr:69123">Lyon</option>
             </select>
           </div>
 
-          <input type="number" id="i_nbPeople" min="1" max="10" placeholder="Number of people" />
+          <input v-model="i_nbP" type="number" id="i_nbPeople" min="1" max="10" placeholder="Number of people" />
           
           <div class="form_date_departure">
             <label>Departure</label>
@@ -31,26 +31,49 @@
           </div>
         </div>
 
-        <button type="submit" v-if="isDateOk">Travel !</button>
+        <button @click="getAllTrainOfDay()" v-if="isDateOk">Travel !</button>
       </form>
 
       <div class="wrongDate" v-if="!isDateOk">Incorrect trip date !</div>
     </div>
+    {{ train }}
   </div>
 </template>
 
 <script>
 import moment from 'moment'
+import { getTrain, getAllTrainsDay } from '../api/SNCF/access.js'
+
 export default {
     name: "planify-vue",
     data() {
       return {
-        i_date: moment(new Date()).format("YYYY-MM-DD")
+        i_date: moment(new Date()).format("YYYY-MM-DD"),
+        s_from: "",
+        s_to: "",
+        i_nbP: "",
+        train: null
       }
     },
     computed: {
       isDateOk() {
         return this.i_date >= moment(new Date()).format("YYYY-MM-DD")
+      }
+    },
+    methods: {
+      async getAllTrainOfDay(){
+            var dateFormatted = this.i_date.replace(/-/g,'') // YYYY-MM-DD -> YYYYMMDD
+            this.train = "Veuillez patienter... (C'est très long)"
+
+            getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{
+                this.train = res;
+            })
+        },
+      async getTrain(dep, arr, date) {
+          return await getTrain(dep, arr, date);
+      },
+      onSubmit() {
+        
       }
     }
 };
