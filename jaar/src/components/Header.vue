@@ -1,8 +1,9 @@
 <template>
     <header>
         <nav>
-            <router-link to="/">Home</router-link>
+            <router-link to="/home">Home</router-link>
             <router-link to="/plan">Planifier Trajet</router-link>
+            <router-link to="/member">Panier</router-link>
             <router-link v-if="signed" to="/reserved">Mes Trajets</router-link>
             <router-link v-if="signed" to="/profile">Mon Profil</router-link>
         </nav>

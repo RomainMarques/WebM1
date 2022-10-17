@@ -17,6 +17,11 @@ const routes = [
     component: () => import('../pages/Planify.vue')
   },
   {
+    path: '/member',
+    name: 'Member',
+    component: () => import('../pages/MemberPage.vue')
+  },
+  {
     path:'/testapi',
     name:'ApiTest',
     component: () => import('../pages/ApiTest.vue')
