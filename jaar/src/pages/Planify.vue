@@ -38,7 +38,7 @@
     </div>
 
     <div class="main_train_content" v-if="isTripDone">
-      <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date" @click="goToTrip(index, item.duration, item.departure_date, item.arrival_date)">
+      <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date">
         <div class="train_index" v-if="isTripDone">
           {{ index + 1 }}
         </div>
@@ -49,6 +49,9 @@
           <div class="train_dates" v-if="isTripDone">
             {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
           </div>
+        </div>
+        <div id="buy">
+            <font-awesome-icon icon="fa-solid fa-cart-shopping" @click="addPanier(item)"/>
         </div>
       </div>
     </div>
@@ -129,6 +132,19 @@ export default {
             duration: moment.utc(dur*1000).format("HH:mm"),
             i_date: this.i_date
         }})
+      },
+      addPanier(item) {
+        const year = item.departure_date.slice(0, 4)
+        const month = item.departure_date.slice(4, 6)
+        const day = item.departure_date.slice(6, 8)
+        const date = this.onlyHours(item.departure_date)
+        const year1 = item.arrival_date.slice(0, 4)
+        const month1 = item.arrival_date.slice(4, 6)
+        const day1 = item.arrival_date.slice(6, 8)
+        const date1 = this.onlyHours(item.arrival_date)
+        console.log(item)
+        console.log(year, month, day, date, year1, month1, day1, date1)
+        //call a la future bdd
       }
     }
 };
