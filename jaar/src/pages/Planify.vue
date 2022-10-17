@@ -38,7 +38,7 @@
     </div>
 
     <div class="main_train_content" v-if="isTripDone">
-      <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date">
+      <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date" @click="goToTrip(index, item.duration, item.departure_date, item.arrival_date)">
         <div class="train_index" v-if="isTripDone">
           {{ index + 1 }}
         </div>
@@ -69,6 +69,9 @@ export default {
         s_from: "",
         s_to: "",
         i_nbP: "",
+        dep: "",
+        arr: "",
+        duration: "",
         trains: null,
         done: false
       }
@@ -86,6 +89,7 @@ export default {
         var currentHour = new Date().getHours()
         var currentMinute = new Date().getMinutes()
         var dateFormatted = this.i_date.replace(/-/g,'') + "T" + currentHour + currentMinute // YYYY-MM-DD -> YYYYMMDD
+        console.log(dateFormatted)
         this.trains = "Veuillez patienter... (C'est très long)"
 
         getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{
@@ -109,6 +113,22 @@ export default {
       formatDuration(dur) {
         if(this.isTripDone && dur != undefined)
           return moment.utc(dur*1000).format("HH:mm")
+      },
+      goToTrip(id, dur, dep, arr) {
+        //Go to the specific trip page with the corresponding data
+        console.log(dur)
+        console.log(dep)
+        this.$router.push({
+          name: 'Trip', params: {
+            id: id,
+            i_nbP: this.i_nbP,
+            s_from: this.s_from,
+            s_to: this.s_to,
+            dep: dep,
+            arr: arr,
+            duration: moment.utc(dur*1000).format("HH:mm"),
+            i_date: this.i_date
+        }})
       }
     }
 };
@@ -156,9 +176,13 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  border-bottom: 1px solid rgba(43, 43, 43, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+
+.train_content:hover {
+  background-color: rgba(250,131,82,0.8);
 }
 
 .train_index {

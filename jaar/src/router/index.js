@@ -24,6 +24,9 @@ const routes = [
   {
     path:'/trip/:id',
     name:'Trip',
+    props: {
+      default: true
+    },
     component: () => import('../components/Trip.vue')
   }
 ]

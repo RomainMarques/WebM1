@@ -1,47 +1,58 @@
 <template>
     <div id="cmd">
-        <div id="depart">
-            <div id="titre">
-                - date départ:
-                <font-awesome-icon icon="fa-solid fa-train-subway" />
-            </div>
-            <div id="saisir">
-                <slot name="depart"></slot>
-            </div>
-        </div>
-        <div id='arrivee'>
-            <div id="titre">
-                - date arrivée:
-                <font-awesome-icon icon="fa-solid fa-train-subway" />
-            </div>
-            <div id="saisir">
-                <slot name="arrivee"></slot>
-            </div>
-        </div>
-        <div id="prix">
-            <div id="titre">
-                - prix:
-                <font-awesome-icon icon="fa-solid fa-train-subway" />
-            </div>
-            <div id="saisir">
-                <div id="test">
-                <slot name="prix"></slot>
-                </div>
-            </div>
-        </div>
+        {{ s_from }}
     </div>
 </template>
 
 <script>
 export default {
-    name:'DetailCommand'
+    name:'Trip',
+    data() {
+        return {
+
+        }
+    },
+    created() {
+        this.fetchFrom()
+    },
+    methods: {
+        fetchFrom() {
+            console.log(this.s_from)
+        }
+    },
+    props: {
+        id: {
+            type: String,
+        },
+        i_nbP: {
+            type: Number,
+        },
+        s_from: {
+            type: String,
+        },
+        s_to: {
+            type: String,
+        },
+        dep: {
+            type: String,
+        },
+        arr: {
+            type: String,
+        },
+        duration: {
+            type: String,
+        },
+        i_date: {
+            type: String,
+        }
+    }
 }
 </script>
 
 <style scoped>
     #cmd {
         display: flex;
-        background-color: rgb(16, 80, 241);
+        background-color: rgba(36,156,138,0.6);
         margin-top: 3%;
         margin-bottom: 2%;
     }
@@ -58,7 +69,7 @@ export default {
         text-align: center;
     }
     #titre {
-        color: rgb(146, 9, 9);
+        color: white;
     }
     
 </style>>
