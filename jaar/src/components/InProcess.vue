@@ -15,6 +15,7 @@
             </detail-command>
         </div>
         <div id="commander">
+            <button id="clickS">Supprimer</button>
             <button id="clickV">Valider</button>
         </div>
     </div>
@@ -48,12 +49,20 @@ export default {
     }
     #commander {
         text-align: right;
-        margin-top : 1%;
         margin-right: 14%;
     }
+    #clickS {
+        margin-right: 1%;
+    }
+    #clickS:hover {
+        background-color: beige;
+        border-radius: 15%;
+        transform: scale(1.5);
+        box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    }
     #clickV:hover {
-        background-color: skyblue;
-        border-radius: 20%;
+        background-color: beige;
+        border-radius: 15%;
         transform: scale(1.5);
         box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
     }
