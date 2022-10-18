@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/plan',
     name: 'Plan',
-    component: () => import('../pages/Planify.vue')
+    component: () => import('../pages/PlanifyPage.vue')
   },
   {
     path:'/testapi',

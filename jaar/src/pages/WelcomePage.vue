@@ -22,7 +22,7 @@
 
 <script>
 import reseau from '@/assets/reseau.png'
-import Sign from './Sign.vue'
+import Sign from '../components/Sign.vue'
 
 export default {
     name : 'welcome-page',
