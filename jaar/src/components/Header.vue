@@ -4,6 +4,7 @@
             <router-link to="/home">Home</router-link>
             <router-link to="/plan">Planifier Trajet</router-link>
             <router-link to="/member">Panier</router-link>
+            <router-link to="/"><font-awesome-icon icon="fa-solid fa-right-from-bracket" /></router-link>
             <router-link v-if="signed" to="/reserved">Mes Trajets</router-link>
             <router-link v-if="signed" to="/profile">Mon Profil</router-link>
         </nav>

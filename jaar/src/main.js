@@ -3,9 +3,9 @@ import App from './App.vue'
 import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faBasketShopping, faTrainSubway, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faBasketShopping, faTrainSubway, faCartShopping, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faBasketShopping, faTrainSubway, faCartShopping)
+library.add(faBasketShopping, faTrainSubway, faCartShopping, faRightFromBracket)
 
 createApp(App)
 .use(router)
