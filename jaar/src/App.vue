@@ -4,7 +4,7 @@
       <welcome-page/>
     </div>
     <div v-else>
-      <Header @logout="logout"/>
+      <Header/>
       <router-view/>
       <Footer/>
     </div>
@@ -28,7 +28,7 @@ export default {
   },
   provide() {
     return {
-      user: this.user,
+      getUser : () => this.user,
       setUser: (user) => {
         this.user = user
       }

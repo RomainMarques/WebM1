@@ -30,7 +30,21 @@ function signup(email, password) {
     });
 }
 
+function signout() {
+    return new Promise((resolve, reject) => {
+        //TODO: Remove possible tokens, and login cache
+        let removed = true;
+        if (removed){
+            resolve();
+        }
+        else {
+            reject("Error while signing out");
+        }
+    });
+}
+
 module.exports = {
     signin,
-    signup
+    signup,
+    signout
 };

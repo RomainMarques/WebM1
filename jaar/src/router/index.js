@@ -12,10 +12,17 @@ const routes = [
     component: () => import('../pages/PlanifyPage.vue')
   },
   {
-    path: '/member',
-    name: 'Member',
-    component: () => import('../pages/MemberPage.vue')
+    path: '/shoppingcart',
+    name: 'ShoppingCart',
+    component: () => import('../pages/ShoppingCartPage.vue')
   },
+  {
+    path:'/profil',
+    name:'Profil',
+    component: () => import('../pages/ProfilPage.vue')
+  },
+
+  //TODO: Remove all test routes
   {
     path:'/testapi',
     name:'ApiTest',

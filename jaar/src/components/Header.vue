@@ -1,33 +1,44 @@
 <template>
     <header>
         <nav>
-            <router-link to="/">Home</router-link>
+            <router-link to="/">Accueil</router-link>
             <router-link to="/plan">Planifier Trajet</router-link>
-            <router-link to="/member">Panier</router-link>
-            <router-link to="/" @click="logout"><font-awesome-icon icon="fa-solid fa-right-from-bracket" /></router-link>
-            <router-link v-if="signed" to="/reserved">Mes Trajets</router-link>
-            <router-link v-if="signed" to="/profile">Mon Profil</router-link>
+            <router-link to="/shoppingcart">Panier</router-link>
+            <router-link to="/reserved">Mes Trajets</router-link>
         </nav>
         <div class="user">
-            <router-link v-if="signed" to="/logout">Se Déconnecter</router-link>
+            <router-link to="/profil">Mon Profil</router-link>
+            <router-link to="/" @click="logout"><font-awesome-icon icon="fa-solid fa-right-from-bracket" /></router-link>
         </div>
     </header>
 </template>
 
 <script>
+import { signout } from '@/services/authentification/auth.js'
+
 export default {
     name: "header-vue",
-    data() {
-        return {
-            signed: false
-        }
+    inject: {
+        getUser: 'getUser',
+        setUser: 'setUser'
     },
-    created() {
-        this.signed = localStorage.getItem("token") != null;
+    computed: {
+        user() {
+            return this.getUser()
+        }
     },
     methods: {
         logout() {
-            this.$emit("logout");
+            signout()
+                .then(() => {
+                    this.setUser({
+                        logined: false,
+                        email: ''
+                    })
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
         }
     }
 }
