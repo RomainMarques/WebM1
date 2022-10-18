@@ -50,6 +50,9 @@
             {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
           </div>
         </div>
+        <div id="buy">
+            <font-awesome-icon icon="fa-solid fa-cart-shopping" @click="addPanier(item)"/>
+        </div>
       </div>
     </div>
     
@@ -69,6 +72,9 @@ export default {
         s_from: "",
         s_to: "",
         i_nbP: "",
+        dep: "",
+        arr: "",
+        duration: "",
         trains: null,
         done: false
       }
@@ -83,7 +89,10 @@ export default {
     },
     methods: {
       async getAllTrainOfDay(){
-        var dateFormatted = this.i_date.replace(/-/g,'') // YYYY-MM-DD -> YYYYMMDD
+        var currentHour = ('0' + new Date().getHours()).slice(-2)
+        var currentMinute = ('0' + new Date().getMinutes()).slice(-2)
+        var dateFormatted = this.i_date.replace(/-/g,'') + "T" + currentHour + currentMinute // YYYY-MM-DD -> YYYYMMDD
+        console.log(dateFormatted)
         this.trains = "Veuillez patienter... (C'est très long)"
 
         getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{
@@ -107,6 +116,35 @@ export default {
       formatDuration(dur) {
         if(this.isTripDone && dur != undefined)
           return moment.utc(dur*1000).format("HH:mm")
+      },
+      goToTrip(id, dur, dep, arr) {
+        //Go to the specific trip page with the corresponding data
+        console.log(dur)
+        console.log(dep)
+        this.$router.push({
+          name: 'Trip', params: {
+            id: id,
+            i_nbP: this.i_nbP,
+            s_from: this.s_from,
+            s_to: this.s_to,
+            dep: dep,
+            arr: arr,
+            duration: moment.utc(dur*1000).format("HH:mm"),
+            i_date: this.i_date
+        }})
+      },
+      addPanier(item) {
+        const year = item.departure_date.slice(0, 4)
+        const month = item.departure_date.slice(4, 6)
+        const day = item.departure_date.slice(6, 8)
+        const date = this.onlyHours(item.departure_date)
+        const year1 = item.arrival_date.slice(0, 4)
+        const month1 = item.arrival_date.slice(4, 6)
+        const day1 = item.arrival_date.slice(6, 8)
+        const date1 = this.onlyHours(item.arrival_date)
+        console.log(item)
+        console.log(year, month, day, date, year1, month1, day1, date1)
+        //call a la future bdd
       }
     }
 };
@@ -154,9 +192,13 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  border-bottom: 1px solid rgba(43, 43, 43, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+
+.train_content:hover {
+  background-color: rgba(250,131,82,0.8);
 }
 
 .train_index {
@@ -166,7 +208,14 @@ export default {
 }
 
 .train_dd {
-  margin-left: 1em;
+  margin-left: 34%;
+}
+#buy {
+  color: beige;
+  margin-left: 40%;
+}
+#buy:hover{
+  transform: scale(1.5);
 }
 
 </style>
