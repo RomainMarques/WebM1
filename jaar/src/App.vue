@@ -4,7 +4,7 @@
       <welcome-page/>
     </div>
     <div v-else>
-      <Header/>
+      <Header @logout="logout"/>
       <router-view/>
       <Footer/>
     </div>

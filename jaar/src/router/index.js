@@ -20,15 +20,7 @@ const routes = [
     path:'/testapi',
     name:'ApiTest',
     component: () => import('../pages/ApiTest.vue')
-  },
-  /*{
-    path:'/trip/:id',
-    name:'Trip',
-    props: {
-      default: true
-    },
-    component: () => import('../components/Trip.vue')
-  }*/
+  }
 ]
 
 const router = createRouter({
