@@ -7,7 +7,7 @@
       />
     </div>
     <div v-else>
-      <Header/>
+      <Header @logout="logout"/>
       <router-view/>
       <Footer/>
     </div>
@@ -44,6 +44,11 @@ export default {
       this.$router.push('/home')
       console.log(user)
     },
+    logout() {
+      //TODO: send logout to server
+      this.signin=false
+      console.log("deconnection")
+    }
 
     
   },
