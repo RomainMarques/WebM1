@@ -214,5 +214,8 @@ export default {
   color: beige;
   margin-left: 40%;
 }
+#buy:hover{
+  transform: scale(1.5);
+}
 
 </style>
