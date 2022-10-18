@@ -48,8 +48,8 @@ export default {
     }
     #commander {
         text-align: right;
-        margin-top : 2%;
-        margin-right: 1%;
+        margin-top : 1%;
+        margin-right: 14%;
     }
     #clickV:hover {
         background-color: skyblue;

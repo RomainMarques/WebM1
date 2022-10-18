@@ -41,9 +41,11 @@ export default {
 <style scoped>
     #cmd {
         display: flex;
-        background-color: rgb(16, 80, 241);
+        background-color: rgba(250,131,82,0.8);
         margin-top: 3%;
         margin-bottom: 2%;
+        margin-left : 14%;
+        margin-right: 14%;
     }
     #depart {
         margin-left: 9%;
