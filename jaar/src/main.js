@@ -8,8 +8,8 @@ import { faBasketShopping, faTrainSubway, faCartShopping } from '@fortawesome/fr
 library.add(faBasketShopping, faTrainSubway, faCartShopping)
 
 createApp(App)
-.use(router)
-.component('font-awesome-icon', FontAwesomeIcon)
-.mount('#app')
+    .use(router)
+    .component('font-awesome-icon', FontAwesomeIcon)
+    .mount('#app')
 
 /* add icons to the library */

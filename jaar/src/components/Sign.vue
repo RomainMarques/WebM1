@@ -2,6 +2,9 @@
     <div>
         <div class="sign-case" v-if='signState === "signup"'>
             <h2>Sign up</h2>
+            <div v-if='errorMessage !== ""' class="error-message">
+                <p>{{ errorMessage }}</p>
+            </div>
             <form @submit.prevent="signUp">
                 <div class="form-group">
                     <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" v-model="email">
@@ -21,6 +24,9 @@
         </div>
         <div class="sign-case" v-if='signState === "signin"'>
             <h2>Sign in</h2>
+            <div v-if='errorMessage !== ""' class="error-message">
+                <p>{{ errorMessage }}</p>
+            </div>
             <form @submit.prevent="signIn">
                 <div class="form-group">
                     <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" v-model="email">
@@ -36,8 +42,21 @@
 </template>
 
 <script>
+import { signin, signup } from '@/services/authentification/auth.js'
+
 export default {
     name: "sign-up-in-vue",
+    inject: {
+        user: {
+            default: {
+                logined: false,
+                email: ''
+            }
+        },
+        setUser: {
+            default: () => {}
+        }
+    },
     props: {
         signState: {
             type: String,
@@ -50,6 +69,7 @@ export default {
             email: "",
             password: "",
             confirmPassword: "",
+            errorMessage : ""
         }
     },
     computed: {
@@ -60,18 +80,36 @@ export default {
     methods: {
         signUp: function () {
             if (this.password === this.confirmPassword && this.email !== "" && this.password !== "" && this.confirmPassword !== "") {
-                this.$emit("signUp", { 
-                    email:this.email, 
-                    password:this.password 
-                });
+                signup(this.email, this.password)
+                    .then(() => {
+                        this.setUser({
+                            logined: true,
+                            email: this.email
+                        })
+                    })
+                    .catch((error) => {
+                        this.errorMessage = error;
+                        setTimeout(() => {
+                            this.errorMessage = "";
+                        }, 5000);
+                    })
             }
         },
         signIn: function () {
             if (this.email !== "" && this.password !== "") {
-                this.$emit("signIn", { 
-                    email:this.email, 
-                    password:this.password 
-                });
+                signin(this.email, this.password)
+                    .then(() => {
+                        this.setUser({
+                            logined: true,
+                            email: this.email
+                        })
+                    })
+                    .catch((error) => {
+                        this.errorMessage = error;
+                        setTimeout(() => {
+                            this.errorMessage = "";
+                        }, 5000);
+                    })
             }
         }
     }
@@ -125,6 +163,14 @@ input:focus {
 
 .text-danger {
     color: red;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 </style>

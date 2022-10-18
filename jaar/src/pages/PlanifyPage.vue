@@ -62,7 +62,7 @@
 
 <script>
 import moment from 'moment'
-import { getTrain, getAllTrainsDay } from '../api/SNCF/access.js'
+import { getTrain, getAllTrainsDay } from '@/services/api/SNCF/access.js'
 
 export default {
     name: "planify-vue",

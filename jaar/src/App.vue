@@ -1,10 +1,7 @@
 <template>
   <div id="main-content">
-    <div v-if="!signin">
-      <welcome-page
-        @signUp="signUp"
-        @signIn="signIn"
-      />
+    <div v-if="!user.logined">
+      <welcome-page/>
     </div>
     <div v-else>
       <Header/>
@@ -23,7 +20,18 @@ export default {
   name: 'App',
   data() {
     return {
-      signin: false
+      user: {
+        logined: false,
+        email: ''
+      },
+    }
+  },
+  provide() {
+    return {
+      user: this.user,
+      setUser: (user) => {
+        this.user = user
+      }
     }
   },
   components: {
@@ -32,20 +40,6 @@ export default {
     WelcomePage
   },
   methods: {
-    signUp(user) {
-      //TODO: send user to server
-      this.signin = true
-      this.$router.push('/home')
-      console.log(user)
-    },
-    signIn(user) {
-      //TODO: send user to server
-      this.signin = true
-      this.$router.push('/home')
-      console.log(user)
-    },
-
-    
   },
 }
 </script>
