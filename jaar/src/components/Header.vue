@@ -52,6 +52,7 @@ header {
     padding: 20px;
     background-color: #f5f5f5;
     border-bottom: 1px solid #ccc;
+    height: 30px;
 }
 
 nav, .user {
