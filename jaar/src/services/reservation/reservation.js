@@ -39,7 +39,7 @@ function removeFromCart(data,user) {
 
 function addToReservation(data,user) {
     return new Promise((resolve, reject) => {
-        axios.post(SERVER_URL + "/reservation/" + user, data)
+        axios.post(SERVER_URL + "/reservations/" + user, data)
             .then((response) => {
                 resolve(response);
             })
@@ -51,7 +51,7 @@ function addToReservation(data,user) {
 
 function getReservation(user) {
     return new Promise((resolve, reject) => {
-        axios.get(SERVER_URL + "/reservation/" + user)
+        axios.get(SERVER_URL + "/reservations/" + user)
             .then((response) => {
                 resolve(response);
             })
@@ -63,7 +63,7 @@ function getReservation(user) {
 
 function removeFromReservation(data,user) {
     return new Promise((resolve, reject) => {
-        axios.delete(SERVER_URL + "/reservation/" + user, data)
+        axios.delete(SERVER_URL + "/reservations/" + user, data)
             .then((response) => {
                 resolve(response);
             })

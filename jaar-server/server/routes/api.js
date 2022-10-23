@@ -33,8 +33,6 @@ router.use((req, res, next) => {
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
-  console.log(username, password);
-
   const user = await sequelize.query(
     `SELECT * FROM users WHERE username = '${username}'`
   );
@@ -126,8 +124,6 @@ router.post("/reservations/:user", async (req, res) => {
   const { user } = req.params;
   const { departure_date, arrival_date, departure_station, arrival_station } = req.body;
   const date_res = new Date().toISOString().slice(0, 19).replace('T', ' ');
-
-  console.log(date_res);
 
   const user_id = await sequelize.query(
     `SELECT id FROM users WHERE username = '${user}'`

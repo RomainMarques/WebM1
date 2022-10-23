@@ -42,8 +42,10 @@ export default {
     methods : {
         async getPanier() {
             const res = await getCart('a@gmail.com')
-            this.trajets = res.data
-            console.log(res.data, this.trajets[0].departure_date)
+            
+            if (res.status == 200) {
+                this.trajets = res.data
+            }
             
         },
         filterDay(date) {
