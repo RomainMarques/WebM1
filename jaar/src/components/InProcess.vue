@@ -36,12 +36,23 @@ export default {
             trajets : null
         }
     },
+    inject: {
+        getUser: 'getUser'
+    },
+    computed: {
+        user() {
+            return this.getUser()
+        }
+    },
+    created() {
+        this.interval = setInterval(() => this.getPanier(), 3000);
+    },
     mounted() {
         this.getPanier()
     },
     methods : {
         async getPanier() {
-            const res = await getCart('a@gmail.com')
+            const res = await getCart(this.user.email)
             
             if (res.status == 200) {
                 this.trajets = res.data
@@ -56,26 +67,23 @@ export default {
             return date.slice(11,16)
         },
         async validate(item){
-            console.log(item)
-            const res = await addToReservation({
-                departure_date : item.departure_date,
-                arrival_date : item.arrival_date,
-                departure_station : item.departure_station,
-                arrival_station : item.arrival_station
-            }, 'a@gmail.com')
-            console.log(res)
-        },
-        async cancel(item) {
-            console.log(item)
             const t = {
                 departure_date : item.departure_date,
                 arrival_date : item.arrival_date,
                 departure_station : item.departure_station,
                 arrival_station : item.arrival_station
             }
-            console.log(t)
-            const res = await removeFromCart(t, 'a@gmail.com')
-            console.log(res)
+            await addToReservation(t, this.user.email)
+            await removeFromCart(t, this.user.email)
+        },
+        async cancel(item) {
+            const t = {
+                departure_date : item.departure_date,
+                arrival_date : item.arrival_date,
+                departure_station : item.departure_station,
+                arrival_station : item.arrival_station
+            }
+            await removeFromCart(t, this.user.email)
         }
     }
 }

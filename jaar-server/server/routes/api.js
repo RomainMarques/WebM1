@@ -83,28 +83,32 @@ router.get("/cart/:user", async (req, res) => {
 router.post("/cart/:user", async (req, res) => {
   const { user } = req.params;
   const { departure_date, arrival_date, departure_station, arrival_station } = req.body;
+  const departure_date_format = new Date(departure_date).toISOString().slice(0, 19).replace('T', ' ');
+  const arrival_date_format = new Date(arrival_date).toISOString().slice(0, 19).replace('T', ' ');
 
   const user_id = await sequelize.query(
     `SELECT id FROM users WHERE username = '${user}'`
   );
 
   const cart = await sequelize.query(
-    `INSERT INTO user_cart (departure_date, arrival_date, departure_station, arrival_station, user_id) VALUES ('${departure_date}', '${arrival_date}', '${departure_station}', '${arrival_station}', '${user_id[0][0].id}')`
+    `INSERT INTO user_cart (departure_date, arrival_date, departure_station, arrival_station, user_id) VALUES ('${departure_date_format}', '${arrival_date_format}', '${departure_station}', '${arrival_station}', '${user_id[0][0].id}')`
   );
 
   res.status(200).json({ message: "Added to cart" });
 });
 
-router.delete("/cart/:user", async (req, res) => {
+router.post("/cartdel/:user", async (req, res) => { // on met post parce que delete n'autorise pas de body
   const { user } = req.params;
   const { departure_date, arrival_date, departure_station, arrival_station } = req.body;
+  const departure_date_format = new Date(departure_date).toISOString().slice(0, 19).replace('T', ' ');
+  const arrival_date_format = new Date(arrival_date).toISOString().slice(0, 19).replace('T', ' ');
 
   const user_id = await sequelize.query(
     `SELECT id FROM users WHERE username = '${user}'`
   );
 
   const cart = await sequelize.query(
-    `DELETE FROM user_cart WHERE departure_date = '${departure_date}' AND arrival_date = '${arrival_date}' AND departure_station = '${departure_station}' AND arrival_station = '${arrival_station}' AND user_id = '${user_id[0][0].id}'`
+    `DELETE FROM user_cart WHERE departure_date = '${departure_date_format}' AND arrival_date = '${arrival_date_format}' AND departure_station = '${departure_station}' AND arrival_station = '${arrival_station}' AND user_id = '${user_id[0][0].id}'`
   );
 
   res.status(200).json({ message: "Removed from cart" });
@@ -124,28 +128,32 @@ router.post("/reservations/:user", async (req, res) => {
   const { user } = req.params;
   const { departure_date, arrival_date, departure_station, arrival_station } = req.body;
   const date_res = new Date().toISOString().slice(0, 19).replace('T', ' ');
+  const departure_date_format = new Date(departure_date).toISOString().slice(0, 19).replace('T', ' ');
+  const arrival_date_format = new Date(arrival_date).toISOString().slice(0, 19).replace('T', ' ');
 
   const user_id = await sequelize.query(
     `SELECT id FROM users WHERE username = '${user}'`
   );
 
   const reservation = await sequelize.query(
-    `INSERT INTO reservations (departure_date, arrival_date, departure_station, arrival_station, date_res, user_id) VALUES ('${departure_date}', '${arrival_date}', '${departure_station}', '${arrival_station}', '${date_res}', '${user_id[0][0].id}')`
+    `INSERT INTO reservations (departure_date, arrival_date, departure_station, arrival_station, date_res, user_id) VALUES ('${departure_date_format}', '${arrival_date_format}', '${departure_station}', '${arrival_station}', '${date_res}', '${user_id[0][0].id}')`
   );
 
   res.status(200).json({ message: "Reservation created" });
 });
 
-router.delete("/reservations/:user", async (req, res) => {
+router.post("/reservationsdel/:user", async (req, res) => { // on met post parce que delete n'autorise pas de bodys
   const { user } = req.params;
   const { departure_date, arrival_date, departure_station, arrival_station } = req.body;
+  const departure_date_format = new Date(departure_date).toISOString().slice(0, 19).replace('T', ' ');
+  const arrival_date_format = new Date(arrival_date).toISOString().slice(0, 19).replace('T', ' ');
 
   const user_id = await sequelize.query(
     `SELECT id FROM users WHERE username = '${user}'`
   );
 
   const reservation = await sequelize.query(
-    `DELETE FROM reservations WHERE departure_date = '${departure_date}' AND arrival_date = '${arrival_date}' AND departure_station = '${departure_station}' AND arrival_station = '${arrival_station}' AND user_id = '${user_id[0][0].id}'`
+    `DELETE FROM reservations WHERE departure_date = '${departure_date_format}' AND arrival_date = '${arrival_date_format}' AND departure_station = '${departure_station}' AND arrival_station = '${arrival_station}' AND user_id = '${user_id[0][0].id}'`
   );
 
   res.status(200).json({ message: "Reservation deleted" });

@@ -27,7 +27,7 @@ function getCart(user) {
 
 function removeFromCart(data,user) {
     return new Promise((resolve, reject) => {
-        axios.delete(SERVER_URL + "/cart/" + user, data)
+        axios.post(SERVER_URL + "/cartdel/" + user, data)
             .then((response) => {
                 resolve(response);
             })
@@ -63,7 +63,7 @@ function getReservation(user) {
 
 function removeFromReservation(data,user) {
     return new Promise((resolve, reject) => {
-        axios.delete(SERVER_URL + "/reservations/" + user, data)
+        axios.post(SERVER_URL + "/reservationsdel/" + user, data)
             .then((response) => {
                 resolve(response);
             })

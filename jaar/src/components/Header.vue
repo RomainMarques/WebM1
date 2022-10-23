@@ -4,7 +4,6 @@
             <router-link to="/">Accueil</router-link>
             <router-link to="/plan">Planifier Trajet</router-link>
             <router-link to="/shoppingcart">Panier</router-link>
-            <router-link to="/reserved">Mes Trajets</router-link>
         </nav>
         <div class="user">
             <router-link to="/profil">Mon Profil</router-link>

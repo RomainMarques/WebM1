@@ -91,6 +91,9 @@ export default {
       },
       isTripDone() {
         return this.done
+      },
+      user() {
+        return this.getUser()
       }
     },
     inject: {
