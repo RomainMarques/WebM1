@@ -83,15 +83,13 @@ router.get("/cart/:user", async (req, res) => {
 router.post("/cart/:user", async (req, res) => {
   const { user } = req.params;
   const { departure_date, arrival_date, departure_station, arrival_station } = req.body;
-  const departure_date_format = new Date(departure_date).toISOString().slice(0, 19).replace('T', ' ');
-  const arrival_date_format = new Date(arrival_date).toISOString().slice(0, 19).replace('T', ' ');
 
   const user_id = await sequelize.query(
     `SELECT id FROM users WHERE username = '${user}'`
   );
 
   const cart = await sequelize.query(
-    `INSERT INTO user_cart (departure_date, arrival_date, departure_station, arrival_station, user_id) VALUES ('${departure_date_format}', '${arrival_date_format}', '${departure_station}', '${arrival_station}', '${user_id[0][0].id}')`
+    `INSERT INTO user_cart (departure_date, arrival_date, departure_station, arrival_station, user_id) VALUES ('${departure_date}', '${arrival_date}', '${departure_station}', '${arrival_station}', '${user_id[0][0].id}')`
   );
 
   res.status(200).json({ message: "Added to cart" });
