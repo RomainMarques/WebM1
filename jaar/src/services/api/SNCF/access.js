@@ -40,8 +40,18 @@ export const getAllTrainsDay = async (departure,arrival,date) => {
             const lastTrainTime = res.data.journeys[0].departure_date_time;
             //replace last char in lastTrainTime by 1
             const lastTrainTimeDate = lastTrainTime.substring(0,lastTrainTime.length - 1) + "1";
-            let isLastTrain = false;
+            let isLastTrain;
             let actualDate = date
+
+            //check if last train time date is inferior to date (we only compare the date part)
+
+            if (lastTrainTimeDate.startsWith(actualDate.substring(0,8))) {
+                isLastTrain = false;
+            } else {
+                isLastTrain = true;
+                toReturn.journeys.push({noMoreTrains : true});
+            }
+
             while (!isLastTrain) {
                 await getTrain(departure,arrival,actualDate).then((res) => {
                     if (res.status === 200) {

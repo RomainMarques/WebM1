@@ -1,32 +1,37 @@
-//authentification functions
-
-//TODO: have a connection to the database
+import { SERVER_URL } from '../const';
+import axios from 'axios';
 
 function signin(email, password) {
     return new Promise((resolve, reject) => {
-        //TODO: check if email exists in the database and if it is the right password (with possibly bcrypt)
-        if (email === "signin@test" && password === "test") {
-            resolve({
-                "email": email,
+        const data = {
+            username: email,
+            password: password
+        };
+        axios.post(SERVER_URL + "/login", data, {"Access-Control-Allow-Origin": "*"})
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                reject(error);
             });
-        }
-        else {
-            reject("Wrong email or password");
-        }
+
     });
 }
 
 function signup(email, password) {
     return new Promise((resolve, reject) => {
-        //TODO: check if email already exists in the database
-        if (email === "signup@test" && password === "test") {
-            resolve({
-                "email": email,
+        const data = {
+            username: email,
+            password: password
+        };
+        axios.post(SERVER_URL + "/register", data)
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                reject(error);
             });
-        }
-        else {
-            reject("Email already exists");
-        }
+
     });
 }
 
@@ -43,7 +48,7 @@ function signout() {
     });
 }
 
-module.exports = {
+export {
     signin,
     signup,
     signout
