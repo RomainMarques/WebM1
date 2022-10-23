@@ -4,21 +4,46 @@
             Commandes antérieures:
         </div>
         <div>
-            <detail-command>
-                <template #depart> a saisir </template>
-                <template #arrivee> a saisir </template>
-                <template #prix> a saisir </template>
-            </detail-command>
+            <div v-for="(departure_date) in trajets" :key="departure_date">
+                <detail-command>
+                    <template #depart> {{filterDay(departure_date.departure_date)}} <br> {{filterHour(departure_date.departure_date)}}</template>
+                    <template #arrivee> {{filterDay(departure_date.arrival_date)}} <br> {{filterHour(departure_date.arrival_date)}}</template>
+                    <template #prix> 20$ </template>
+                </detail-command>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import DetailCommand from './DetailCommand.vue'
+import { getReservation } from '../services/reservation/reservation.js'
 export default {
     name:'PastCommands',
     components : {
         DetailCommand
+    },
+    data() {
+        return {
+            trajets : null
+        }
+    },
+    mounted() {
+        this.getCommandes()
+    },
+    methods : {
+        async getCommandes() {
+            const res = await getReservation('a@gmail.com')
+            this.trajets = res.data
+            
+        },
+        filterDay(date) {
+            let newDate = date.slice(8, 10)+"/"+date.slice(5, 7) +"/" +date.slice(0, 4)
+            return newDate
+        },
+        filterHour(date) {
+            return date.slice(11,16)
+        }
     }
 }
 </script>

@@ -9,13 +9,13 @@
             Ma commande:
             </div>
             <div v-for="(departure_date) in trajets" :key="departure_date">
-                    <detail-command>
-                        <template #depart> {{filterDay(departure_date.departure_date)}} <br> {{filterHour(departure_date.departure_date)}}</template>
-                        <template #arrivee> {{filterDay(departure_date.arrival_date)}} <br> {{filterHour(departure_date.arrival_date)}}</template>
-                        <template #prix> 20$ </template>
-                    </detail-command>
-                    <font-awesome-icon id="buttonResa" icon="fa-solid fa-check" @click="validate(departure_date)"/>
-                    <font-awesome-icon id="buttonResa" icon="fa-solid fa-circle-xmark" @click="cancel(departure_date)"/>
+                <detail-command>
+                    <template #depart> {{filterDay(departure_date.departure_date)}} <br> {{filterHour(departure_date.departure_date)}}</template>
+                    <template #arrivee> {{filterDay(departure_date.arrival_date)}} <br> {{filterHour(departure_date.arrival_date)}}</template>
+                    <template #prix> 20$ </template>
+                </detail-command>
+                <font-awesome-icon id="buttonResa" icon="fa-solid fa-check" @click="validate(departure_date)"/>
+                <font-awesome-icon id="buttonResa" icon="fa-solid fa-circle-xmark" @click="cancel(departure_date)"/>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@ export default {
             
         },
         filterDay(date) {
-            let newDate = date.slice(8, 10)+"/"+date.slice(5, 7) +"/" +date.slice(0, 4) + "\n"
+            let newDate = date.slice(8, 10)+"/"+date.slice(5, 7) +"/" +date.slice(0, 4)
             return newDate
         },
         filterHour(date) {
