@@ -31,6 +31,9 @@ export default {
     mounted() {
         this.getCommandes()
     },
+    created() {
+        this.interval = setInterval(() => this.getCommandes(), 3000);
+    },
     methods : {
         async getCommandes() {
             const res = await getReservation('a@gmail.com')
