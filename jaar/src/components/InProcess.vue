@@ -71,7 +71,8 @@ export default {
                 departure_date : item.departure_date,
                 arrival_date : item.arrival_date,
                 departure_station : item.departure_station,
-                arrival_station : item.arrival_station
+                arrival_station : item.arrival_station,
+                price : item.price
             }
             await addToReservation(t, this.user.email)
             await removeFromCart(t, this.user.email)

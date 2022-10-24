@@ -150,7 +150,8 @@ export default {
           departure_date : item.departure_date,
           arrival_date : item.arrival_date,
           departure_station : this.s_from,
-          arrival_station : this.s_to
+          arrival_station : this.s_to,
+          price : 20//TODO: estimer le prix correctement
         }, this.getUser().email)
 
         if (res.status === 200) {

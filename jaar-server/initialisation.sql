@@ -1,3 +1,4 @@
+create database if not exists db_jaar;
 use db_jaar;
 
 create table if not exists users (
@@ -14,6 +15,7 @@ create table if not exists user_cart (
     arrival_date datetime not null,
     departure_station varchar(255) not null,
     arrival_station varchar(255) not null,
+    price float,
     primary key (id),
     foreign key (user_id) references users(id)
 );
@@ -26,6 +28,7 @@ create table if not exists reservations (
     departure_station varchar(255) not null,
     arrival_station varchar(255) not null,
     date_res date not null,
+    price float,
     primary key (id),
     foreign key (user_id) references users(id)
 );
