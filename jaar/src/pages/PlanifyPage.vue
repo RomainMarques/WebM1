@@ -45,7 +45,7 @@
           </div>
           <div class="train_dd">
             <div class="train_duration" v-if="isTripDone">
-              Durée : {{ formatDuration(item.duration) }}
+              Duration : {{ formatDuration(item.duration) }}
             </div>
             <div class="train_dates" v-if="isTripDone">
               {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
@@ -60,8 +60,9 @@
         No more trains available for this trip. Please try another date.
       </div>
     </div>
-    
-    {{ trains }}
+    <div v-if="!isTripDone">
+      {{ trains }}
+    </div>
   </div>
 </template>
 
@@ -105,7 +106,7 @@ export default {
         var currentMinute = ('0' + new Date().getMinutes()).slice(-2)
         var dateFormatted = this.i_date.replace(/-/g,'') + "T" + currentHour + currentMinute // YYYY-MM-DD -> YYYYMMDD
         console.log(dateFormatted)
-        this.trains = "Veuillez patienter... (C'est très long)"
+        this.trains = "Please wait..."
 
         getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{
             this.trains = res.journeys;
