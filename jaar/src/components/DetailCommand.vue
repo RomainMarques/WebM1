@@ -41,6 +41,8 @@ export default {
 <style scoped>
     #cmd {
         display: flex;
+        align-items: center;
+        justify-content: space-around;
         background-color: rgba(250,131,82,0.8);
         margin-top: 3%;
         margin-bottom: 2%;
@@ -50,15 +52,12 @@ export default {
         padding: 2px;
     }
     #depart {
-        margin-left: 9%;
         text-align: center;
     }
     #arrivee {
-        margin-left : 32%;
         text-align: center;
     }
     #prix {
-        margin-left: 28%;
         text-align: center;
     }
     #titre {
