@@ -155,6 +155,7 @@ export default {
 
         if (res.status === 200) {
           console.log('added to cart') //TODO: add a message to the user on the page
+          alert('Added to cart !')
         }
       }
     }
@@ -190,6 +191,10 @@ export default {
 
 #i_nbPeople, .form_date_departure {
   margin-left: 1em;
+}
+
+#i_nbPeople {
+  width: 125px;
 }
 
 .main_train_content {
