@@ -7,7 +7,7 @@
         <div class="form_trip_content">
           <div class="form_trip_from">
             <label>From</label>
-            <select v-model="s_from" name="destinations_from" id="select_from">
+            <select class="select" v-model="s_from" name="destinations_from" id="select_from">
               <option disabled value="">--Destination--</option>
               <option value="admin:fr:75056">Paris</option>
               <option value="admin:fr:69123">Lyon</option>
@@ -16,18 +16,21 @@
 
           <div class="form_trip_to">
             <label>To</label>
-            <select v-model="s_to" name="destinations_to" id="select_to">
+            <select class="select" v-model="s_to" name="destinations_to" id="select_to">
               <option disabled value="">--Destination--</option>
               <option value="admin:fr:75056">Paris</option>
               <option value="admin:fr:69123">Lyon</option>
             </select>
           </div>
 
-          <input v-model="i_nbP" type="number" id="i_nbPeople" min="1" max="10" placeholder="Number of people" />
-          
+          <div class="form_trip_to">
+            <label>Number</label>
+            <input class="select heigth-limit" v-model="i_nbP" type="number" id="i_nbPeople" min="1" max="10" placeholder="Number of people" />
+          </div>
+
           <div class="form_date_departure">
             <label>Departure</label>
-            <input type="date" v-model="i_date" id="datePicker" />
+            <input class="select" type="date" v-model="i_date" id="datePicker" />
           </div>
         </div>
 
@@ -176,19 +179,71 @@ export default {
 </script>
 
 <style scoped>
+
+.heigth-limit{
+ /* height: 30px; */
+}
+
+.select {
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 100%;
+  width: 160px;
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: unset;
+  outline-color: rgb(84 105 212 / 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+.trip_content {
+  margin:auto;
+  width: 100%;
+  max-width: 650px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  padding: 48px;
+}
+
+button {
+  padding: 8px 16px;
+  width: 160px;
+  border-radius: 4px;
+  border: unset;
+  background-color: rgb(84, 105, 212);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0.12) 0px 1px 1px 0px,
+  rgb(84, 105, 212) 0px 0px 0px 1px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
 .main_content {
+  padding:48px 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.trip_content {
+/* .trip_content {
   padding: 1em;
   margin: 1em;
   background-color: rgba(36,156,138,0.6);
   width: 50%;
   border-radius: 5px;
-}
+} */
 
 .trip_content, .form_trip, .form_date_departure, .form_trip_from, .form_trip_to {
   display: flex;
@@ -202,13 +257,13 @@ export default {
   margin-bottom: 1em;
 }
 
-#i_nbPeople, .form_date_departure {
+/* #i_nbPeople, .form_date_departure {
   margin-left: 1em;
 }
 
 #i_nbPeople {
   width: 125px;
-}
+} */
 
 .main_train_content {
   background-color: rgba(250,131,82,0.5);
@@ -246,9 +301,9 @@ export default {
 #buy:hover{
   transform: scale(1.5);
 }
-#travel:hover{
+/* #travel:hover{
   transform: scale(1.5);
   color : burlywood;
-}
+} */
 
 </style>
