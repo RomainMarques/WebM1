@@ -30,6 +30,14 @@ export default {
             trajets : null
         }
     },
+    inject: {
+        getUser: 'getUser'
+    },
+    computed: {
+        user() {
+            return this.getUser()
+        }
+    },
     mounted() {
         this.getCommandes()
     },
@@ -38,7 +46,7 @@ export default {
     },
     methods : {
         async getCommandes() {
-            const res = await getReservation('a@gmail.com')
+            const res = await getReservation(this.user.email)
             this.trajets = res.data
             
         },
