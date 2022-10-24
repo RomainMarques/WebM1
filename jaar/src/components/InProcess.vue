@@ -12,7 +12,7 @@
                 <detail-command>
                     <template #depart> {{filterDay(departure_date.departure_date)}} <br> {{filterHour(departure_date.departure_date)}}</template>
                     <template #arrivee> {{filterDay(departure_date.arrival_date)}} <br> {{filterHour(departure_date.arrival_date)}}</template>
-                    <template #prix> 20$ </template>
+                    <template #prix> {{departure_date.price}}$ </template>
                 </detail-command>
                 <div id="btns_cart">
                     <font-awesome-icon id="buttonResa" icon="fa-solid fa-check" @click="validate(departure_date)"/>

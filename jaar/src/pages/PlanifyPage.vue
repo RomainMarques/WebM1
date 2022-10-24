@@ -54,7 +54,7 @@
             {{this.listPrix[index]}}$
           </div>
           <div id="buy">
-              <font-awesome-icon icon="fa-solid fa-cart-shopping" @click="addPanier(item)"/>
+              <font-awesome-icon icon="fa-solid fa-cart-shopping" @click="addPanier(item, index)"/>
           </div>
         </div>
       </div>
@@ -149,13 +149,13 @@ export default {
             i_date: this.i_date
         }})
       },
-      async addPanier(item) {
+      async addPanier(item, index) {
         const res = await addToCart({
           departure_date : item.departure_date,
           arrival_date : item.arrival_date,
           departure_station : this.s_from,
           arrival_station : this.s_to,
-          price : 20//TODO: estimer le prix correctement
+          price : this.listPrix[index]
         }, this.getUser().email)
 
         if (res.status === 200) {
