@@ -31,7 +31,7 @@
           </div>
         </div>
 
-        <button @click="getAllTrainOfDay()" v-if="isDateOk">Travel !</button>
+        <button @click="getAllTrainOfDay()" v-if="isDateOk" id="travel">Travel !</button>
       </form>
 
       <div class="wrongDate" v-if="!isDateOk">Incorrect trip date !</div>
@@ -40,6 +40,7 @@
     <div class="main_train_content" v-if="isTripDone">
       <div v-if="!trains.noMoreTrains">
         <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date">
+          {{addPrix()}}
           <div class="train_index" v-if="isTripDone">
             {{ index + 1 }}
           </div>
@@ -51,8 +52,11 @@
               {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
             </div>
           </div>
+          <div id="prix">
+            {{this.listPrix[index]}}$
+          </div>
           <div id="buy">
-              <font-awesome-icon icon="fa-solid fa-cart-shopping" @click="addPanier(item)"/>
+              <font-awesome-icon icon="fa-solid fa-cart-shopping" @click="addPanier(item, index)"/>
           </div>
         </div>
       </div>
@@ -83,7 +87,8 @@ export default {
         arr: "",
         duration: "",
         trains: null,
-        done: false
+        done: false,
+        listPrix : []
       }
     },
     computed: {
@@ -146,18 +151,25 @@ export default {
             i_date: this.i_date
         }})
       },
-      async addPanier(item) {
+      async addPanier(item, index) {
         const res = await addToCart({
           departure_date : item.departure_date,
           arrival_date : item.arrival_date,
           departure_station : this.s_from,
-          arrival_station : this.s_to
+          arrival_station : this.s_to,
+          price : this.listPrix[index]
         }, this.getUser().email)
 
         if (res.status === 200) {
           console.log('added to cart') //TODO: add a message to the user on the page
           alert('Added to cart !')
         }
+      },
+      getPrix() {
+        return Math.floor(Math.random() * 100) + 20
+      },
+      addPrix() {
+        this.listPrix.push(this.getPrix())
       }
     }
 };
@@ -233,6 +245,10 @@ export default {
 }
 #buy:hover{
   transform: scale(1.5);
+}
+#travel:hover{
+  transform: scale(1.5);
+  color : burlywood;
 }
 
 </style>

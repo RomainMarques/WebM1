@@ -12,7 +12,7 @@
                 <detail-command>
                     <template #depart> {{filterDay(departure_date.departure_date)}} <br> {{filterHour(departure_date.departure_date)}}</template>
                     <template #arrivee> {{filterDay(departure_date.arrival_date)}} <br> {{filterHour(departure_date.arrival_date)}}</template>
-                    <template #prix> 20$ </template>
+                    <template #prix> {{departure_date.price}}$ </template>
                 </detail-command>
                 <div id="btns_cart">
                     <font-awesome-icon id="buttonResa" icon="fa-solid fa-check" @click="validate(departure_date)"/>
@@ -27,6 +27,7 @@
 
 import DetailCommand from './DetailCommand.vue'
 import { getCart, removeFromCart, addToReservation } from '../services/reservation/reservation.js'
+import {filterDay, filterHour} from '../Util/TrajetsUtil.js'
 
 export default {
     name : 'InProcess',
@@ -62,18 +63,18 @@ export default {
             
         },
         filterDay(date) {
-            let newDate = date.slice(8, 10)+"/"+date.slice(5, 7) +"/" +date.slice(0, 4)
-            return newDate
+            return filterDay(date)
         },
         filterHour(date) {
-            return date.slice(11,16)
+            return filterHour(date)
         },
         async validate(item){
             const t = {
                 departure_date : item.departure_date,
                 arrival_date : item.arrival_date,
                 departure_station : item.departure_station,
-                arrival_station : item.arrival_station
+                arrival_station : item.arrival_station,
+                price : item.price
             }
             await addToReservation(t, this.user.email)
             await removeFromCart(t, this.user.email)
