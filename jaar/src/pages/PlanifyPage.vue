@@ -31,7 +31,7 @@
           </div>
         </div>
 
-        <button @click="getAllTrainOfDay()" v-if="isDateOk">Travel !</button>
+        <button @click="getAllTrainOfDay()" v-if="isDateOk" id="travel">Travel !</button>
       </form>
 
       <div class="wrongDate" v-if="!isDateOk">Incorrect trip date !</div>
@@ -51,6 +51,8 @@
             <div class="train_dates" v-if="isTripDone">
               {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
             </div>
+          </div>
+          <div id="prix">
             {{this.listPrix[index]}}$
           </div>
           <div id="buy">
@@ -243,6 +245,10 @@ export default {
 }
 #buy:hover{
   transform: scale(1.5);
+}
+#travel:hover{
+  transform: scale(1.5);
+  color : burlywood;
 }
 
 </style>

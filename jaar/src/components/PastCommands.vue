@@ -18,6 +18,8 @@
 <script>
 import DetailCommand from './DetailCommand.vue'
 import { getReservation } from '../services/reservation/reservation.js'
+import {filterDay, filterHour} from '../Util/TrajetsUtil.js'
+
 export default {
     name:'PastCommands',
     components : {
@@ -41,11 +43,10 @@ export default {
             
         },
         filterDay(date) {
-            let newDate = date.slice(8, 10)+"/"+date.slice(5, 7) +"/" +date.slice(0, 4)
-            return newDate
+            return filterDay(date)
         },
         filterHour(date) {
-            return date.slice(11,16)
+            return filterHour(date)
         }
     }
 }
