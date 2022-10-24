@@ -9,7 +9,7 @@ export default {
     name : 'home-page',
     data() {
         return {
-            message : "Hello World !"
+            message : "Welcome to JAAR, wanna travel ?"
         }
     }
 }

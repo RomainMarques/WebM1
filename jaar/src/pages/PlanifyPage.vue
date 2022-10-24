@@ -40,16 +40,18 @@
     <div class="main_train_content" v-if="isTripDone">
       <div v-if="!trains.noMoreTrains">
         <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date">
+          {{addPrix()}}
           <div class="train_index" v-if="isTripDone">
             {{ index + 1 }}
           </div>
           <div class="train_dd">
             <div class="train_duration" v-if="isTripDone">
-              Durée : {{ formatDuration(item.duration) }}
+              Duration : {{ formatDuration(item.duration) }}
             </div>
             <div class="train_dates" v-if="isTripDone">
               {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
             </div>
+            {{this.listPrix[index]}}$
           </div>
           <div id="buy">
               <font-awesome-icon icon="fa-solid fa-cart-shopping" @click="addPanier(item)"/>
@@ -60,8 +62,9 @@
         No more trains available for this trip. Please try another date.
       </div>
     </div>
-    
-    {{ trains }}
+    <div v-if="!isTripDone">
+      {{ trains }}
+    </div>
   </div>
 </template>
 
@@ -82,7 +85,8 @@ export default {
         arr: "",
         duration: "",
         trains: null,
-        done: false
+        done: false,
+        listPrix : []
       }
     },
     computed: {
@@ -105,7 +109,7 @@ export default {
         var currentMinute = ('0' + new Date().getMinutes()).slice(-2)
         var dateFormatted = this.i_date.replace(/-/g,'') + "T" + currentHour + currentMinute // YYYY-MM-DD -> YYYYMMDD
         console.log(dateFormatted)
-        this.trains = "Veuillez patienter... (C'est très long)"
+        this.trains = "Please wait..."
 
         getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{
             this.trains = res.journeys;
@@ -156,7 +160,14 @@ export default {
 
         if (res.status === 200) {
           console.log('added to cart') //TODO: add a message to the user on the page
+          alert('Added to cart !')
         }
+      },
+      getPrix() {
+        return Math.floor(Math.random() * 100) + 20
+      },
+      addPrix() {
+        this.listPrix.push(this.getPrix())
       }
     }
 };
@@ -191,6 +202,10 @@ export default {
 
 #i_nbPeople, .form_date_departure {
   margin-left: 1em;
+}
+
+#i_nbPeople {
+  width: 125px;
 }
 
 .main_train_content {

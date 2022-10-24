@@ -1,12 +1,12 @@
 <template>
     <header>
         <nav>
-            <router-link to="/">Accueil</router-link>
-            <router-link to="/plan">Planifier Trajet</router-link>
-            <router-link to="/shoppingcart">Panier</router-link>
+            <router-link to="/">Home</router-link>
+            <router-link to="/plan">Planify Trip</router-link>
+            <router-link to="/shoppingcart">Cart</router-link>
         </nav>
         <div class="user">
-            <router-link to="/profil">Mon Profil</router-link>
+            <router-link to="/profil">My Profile</router-link>
             <router-link to="/" @click="logout"><font-awesome-icon icon="fa-solid fa-right-from-bracket" /></router-link>
         </div>
     </header>

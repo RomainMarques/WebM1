@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="titre">
-            Commandes antérieures:
+            Previous trips
         </div>
         <div>
             <div v-for="(departure_date) in trajets" :key="departure_date">
