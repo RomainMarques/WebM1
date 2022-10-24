@@ -1,12 +1,12 @@
 <template>
     <div>
         <div id="panier">
-            Mon Panier
+            Cart
             <font-awesome-icon icon="fa-solid fa-basket-shopping" />
         </div>
         <div>
             <div id="cmdcur">
-            Ma commande:
+            My trip
             </div>
             <div v-for="(departure_date) in trajets" :key="departure_date">
                 <detail-command>

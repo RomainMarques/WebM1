@@ -35,6 +35,7 @@ footer {
     background-color: rgba(189, 189, 189, 0.5);
     color: black;
     border-top: 1px solid #ccc;
+    margin-top: 1em;
 }
 
 .right, .center, .left {
