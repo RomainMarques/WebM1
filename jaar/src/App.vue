@@ -1,10 +1,10 @@
 <template>
-  <div id="main-content">
+  <div id="main-content-app">
     <notifications group="main" />
     <div v-if="!user.logined">
       <welcome-page/>
     </div>
-    <div v-else>
+    <div v-else class="container">
       <Header/>
       <router-view/>
       <Footer/>
@@ -52,13 +52,19 @@ html, body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#main-content{
+#main-content-app{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-footer {
-  margin-top: auto;
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+/* footer {
+  margin-top: auto;
+} */
 </style>

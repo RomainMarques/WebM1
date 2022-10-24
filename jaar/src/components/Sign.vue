@@ -1,44 +1,57 @@
 <template>
-    <div>
-        <div class="sign-case" v-if='signState === "signup"'>
+    <div class="rootForm">
+    
+        <div v-if='signState === "signup"'>
             <h2>Sign up</h2>
             <div v-if='errorMessage !== ""' class="error-message">
                 <p>{{ errorMessage }}</p>
             </div>
+            
             <form @submit.prevent="signUp">
-                <div class="form-group">
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" v-model="email">
+                <div class="field ">
+                  <label><b>Email</b></label>
+                  <input type="email" name="email" placeholder="Email" v-model="mail">
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" v-model="password">
+                <div class="field">
+                    <label><b>Password</b></label>
+                    <input type="password" name="password" placeholder="Password" v-model="confirmPassword" >
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" v-model="confirmPassword">
+                <div class="field">
+                    <label><b>Confirm Password</b></label>
+                    <input type="password" name="ConfirmPassword" placeholder="Confirm Password" v-model="confirmpassword" @keyup.enter="signUp">
                 </div>
-                <div class="form-group">
+                <div class="field">
                     <label for="passwordsMissmatch" class="text-danger" v-if="!isPasswordMatch">Passwords missmatch</label>
                 </div>
-                <button type="submit">Register</button>
-            </form>
-            
+                <div class="field">
+                  <button type="submit">Register</button>
+                </div>
+
+              </form>
+              
+            </div>
         </div>
+          
+    
         <div class="sign-case" v-if='signState === "signin"'>
             <h2>Sign in</h2>
             <div v-if='errorMessage !== ""' class="error-message">
                 <p>{{ errorMessage }}</p>
             </div>
             <form @submit.prevent="signIn">
-                <div class="form-group">
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" v-model="email">
+                <div class="field">
+                    <label><b>Email</b></label>
+                    <input type="email" name="inputEmail" placeholder="Email" v-model="email" >
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" v-model="password">
+                <div class="field">
+                    <label><b>Password</b></label>
+                    <input type="password" name="password" placeholder="Password" v-model="password" @keyup.enter="signUp">
                 </div>
                 <button type="submit">Login</button>
             </form>
             
         </div>
-    </div>
+    
 </template>
 
 <script>
@@ -117,50 +130,14 @@ export default {
 </script>
 
 <style scoped>
-.sign-case {
-    background: rgba(255, 255, 255, 0.75);
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 
-.sign-case h2 {
-    text-align: center;
+.rootForm{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    
 }
-
-.sign-case form {
-    margin-top: 20px;
-}
-
-.sign-case button {
-    display: block;
-    margin: 0 auto;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-input {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input:focus {
-    outline: none;
-    border: 1px solid #555;
-}
-
 .text-danger {
     color: red;
 }
@@ -172,5 +149,50 @@ input:focus {
     margin-bottom: 10px;
     border-radius: 5px;
 }
+.field, button {
+  padding-bottom: 24px;
+  width: 100%;
+}
+.field input, button {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 20px;
+  border: unset;
+  border-radius: 4px;
+  outline-color: rgb(84 105 212 / 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+
+button {
+  padding: 8px 16px;
+  
+  background-color: rgb(84, 105, 212);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0.12) 0px 1px 1px 0px,
+  rgb(84, 105, 212) 0px 0px 0px 1px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+b{
+  /* margin-bottom: 10px; */
+}
+
 
 </style>
