@@ -45,7 +45,7 @@
           </div>
           <div class="train_dd">
             <div class="train_duration" v-if="isTripDone">
-              Durée : {{ formatDuration(item.duration) }}
+              Duration : {{ formatDuration(item.duration) }}
             </div>
             <div class="train_dates" v-if="isTripDone">
               {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
@@ -60,8 +60,9 @@
         No more trains available for this trip. Please try another date.
       </div>
     </div>
-    
-    {{ trains }}
+    <div v-if="!isTripDone">
+      {{ trains }}
+    </div>
   </div>
 </template>
 
@@ -105,7 +106,7 @@ export default {
         var currentMinute = ('0' + new Date().getMinutes()).slice(-2)
         var dateFormatted = this.i_date.replace(/-/g,'') + "T" + currentHour + currentMinute // YYYY-MM-DD -> YYYYMMDD
         console.log(dateFormatted)
-        this.trains = "Veuillez patienter... (C'est très long)"
+        this.trains = "Please wait..."
 
         getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{
             this.trains = res.journeys;
@@ -155,6 +156,7 @@ export default {
 
         if (res.status === 200) {
           console.log('added to cart') //TODO: add a message to the user on the page
+          alert('Added to cart !')
         }
       }
     }
@@ -190,6 +192,10 @@ export default {
 
 #i_nbPeople, .form_date_departure {
   margin-left: 1em;
+}
+
+#i_nbPeople {
+  width: 125px;
 }
 
 .main_train_content {

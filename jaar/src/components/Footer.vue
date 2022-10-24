@@ -1,25 +1,21 @@
 <template>
     <footer>
         <div class="right">
-            <p>Programmé par :</p>
-            <ul>
-                <li>Antoine Lachaud</li>
-                <li>Romain Marques</li>
-                <li>Antoine Rincheval</li>
-                <li>Jathoosh Thavarasa</li>
-            </ul>
+            <p class="p_info">Coded by</p>
+            <div>Antoine Lachaud</div>
+            <div>Romain Marques</div>
+            <div>Antoine Rincheval</div>
+            <div>Jathoosh Thavarasa</div>
         </div>
         <div class="center">
-            <p>Informations :
-                Jaar is a web application that allows you to plan your trips through SNCF api.
+            <p>Information:
+                Jaar is a web application that allows you to plan your trips through the SNCF API.
             </p>
         </div>
         <div class="left">
-            <p>Liens :</p>
-            <ul>
-                <li><a href="https://github.com/RomainMarques/WebM1">Github</a></li>
-                <li><a href="https://www.sncf.com/fr">SNCF</a></li>
-            </ul>
+            <p class="p_info">Links</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/RomainMarques/WebM1">Github</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.sncf.com/fr">SNCF</a>
         </div>
     </footer>
 </template>
@@ -33,11 +29,13 @@ export default {
 <style scoped>
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    background-color: #f5f5f5;
+    padding: 10px;
+    background-color: rgba(189, 189, 189, 0.5);
+    color: black;
     border-top: 1px solid #ccc;
+    margin-top: 1em;
 }
 
 .right, .center, .left {
@@ -57,6 +55,14 @@ footer {
 
 .center p {
     text-align: center;
+    font-style: italic;
 }
 
+.p_info {
+    font-weight: bold;
+}
+
+a {
+    color: grey;
+}
 </style>
