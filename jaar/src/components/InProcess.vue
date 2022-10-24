@@ -14,8 +14,10 @@
                     <template #arrivee> {{filterDay(departure_date.arrival_date)}} <br> {{filterHour(departure_date.arrival_date)}}</template>
                     <template #prix> 20$ </template>
                 </detail-command>
-                <font-awesome-icon id="buttonResa" icon="fa-solid fa-check" @click="validate(departure_date)"/>
-                <font-awesome-icon id="buttonResa" icon="fa-solid fa-circle-xmark" @click="cancel(departure_date)"/>
+                <div id="btns_cart">
+                    <font-awesome-icon id="buttonResa" icon="fa-solid fa-check" @click="validate(departure_date)"/>
+                    <font-awesome-icon id="buttonResa" icon="fa-solid fa-circle-xmark" @click="cancel(departure_date)"/>
+                </div>
             </div>
         </div>
     </div>
@@ -91,6 +93,12 @@ export default {
 </script>
 
 <style scoped>
+    #btns_cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     #panier {
         text-align: center;
         font-size: xxx-large;

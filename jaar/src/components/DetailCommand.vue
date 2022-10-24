@@ -2,7 +2,7 @@
     <div id="cmd">
         <div id="depart">
             <div id="titre">
-                - date départ:
+                Departure Date
                 <font-awesome-icon icon="fa-solid fa-train-subway" />
             </div>
             <div id="saisir">
@@ -11,7 +11,7 @@
         </div>
         <div id='arrivee'>
             <div id="titre">
-                - date arrivée:
+                Arrival Date
                 <font-awesome-icon icon="fa-solid fa-train-subway" />
             </div>
             <div id="saisir">
@@ -20,7 +20,7 @@
         </div>
         <div id="prix">
             <div id="titre">
-                - prix:
+                Price
                 <font-awesome-icon icon="fa-solid fa-train-subway" />
             </div>
             <div id="saisir">
@@ -46,6 +46,8 @@ export default {
         margin-bottom: 2%;
         margin-left : 14%;
         margin-right: 14%;
+        border-radius: 5px;
+        padding: 2px;
     }
     #depart {
         margin-left: 9%;
