@@ -1,3 +1,4 @@
+create database if not exists db_jaar;
 use db_jaar;
 
 create table if not exists users (
