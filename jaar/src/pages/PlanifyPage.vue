@@ -40,6 +40,7 @@
     <div class="main_train_content" v-if="isTripDone">
       <div v-if="!trains.noMoreTrains">
         <div class="train_content" v-for="(item, index) in trains" :key="item.departure_date">
+          {{addPrix()}}
           <div class="train_index" v-if="isTripDone">
             {{ index + 1 }}
           </div>
@@ -50,6 +51,7 @@
             <div class="train_dates" v-if="isTripDone">
               {{ onlyHours(item.departure_date) }} - {{ onlyHours(item.arrival_date) }}
             </div>
+            {{this.listPrix[index]}}$
           </div>
           <div id="buy">
               <font-awesome-icon icon="fa-solid fa-cart-shopping" @click="addPanier(item)"/>
@@ -83,7 +85,8 @@ export default {
         arr: "",
         duration: "",
         trains: null,
-        done: false
+        done: false,
+        listPrix : []
       }
     },
     computed: {
@@ -158,6 +161,12 @@ export default {
           console.log('added to cart') //TODO: add a message to the user on the page
           alert('Added to cart !')
         }
+      },
+      getPrix() {
+        return Math.floor(Math.random() * 100) + 20
+      },
+      addPrix() {
+        this.listPrix.push(this.getPrix())
       }
     }
 };
