@@ -10,15 +10,15 @@
             <form @submit.prevent="signUp">
                 <div class="field ">
                   <label><b>Email</b></label>
-                  <input type="email" name="email" placeholder="Email" v-model="mail">
+                  <input type="email" name="email" placeholder="Email" v-model="email">
                 </div>
                 <div class="field">
                     <label><b>Password</b></label>
-                    <input type="password" name="password" placeholder="Password" v-model="confirmPassword" >
+                    <input type="password" name="password" placeholder="Password" v-model="password" >
                 </div>
                 <div class="field">
                     <label><b>Confirm Password</b></label>
-                    <input type="password" name="ConfirmPassword" placeholder="Confirm Password" v-model="confirmpassword" @keyup.enter="signUp">
+                    <input type="password" name="ConfirmPassword" placeholder="Confirm Password" v-model="confirmPassword" @keyup.enter="signUp">
                 </div>
                 <div class="field">
                     <label for="passwordsMissmatch" class="text-danger" v-if="!isPasswordMatch">Passwords missmatch</label>
@@ -27,9 +27,8 @@
                   <button type="submit">Register</button>
                 </div>
 
-              </form>
+            </form>
               
-            </div>
         </div>
           
     
@@ -51,6 +50,7 @@
             </form>
             
         </div>
+    </div>
     
 </template>
 
@@ -189,10 +189,5 @@ button {
   cursor: pointer;
   text-align: center;
 }
-
-b{
-  /* margin-bottom: 10px; */
-}
-
 
 </style>

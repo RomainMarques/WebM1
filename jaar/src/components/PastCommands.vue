@@ -30,6 +30,19 @@ export default {
             trajets : null
         }
     },
+    props : {
+        shouldUpdate : {
+            type : Boolean,
+            default : false
+        }
+    },
+    watch : {
+        shouldUpdate(newVal) {
+            if (newVal) {
+                this.getCommandes()
+            }
+        }
+    },
     inject: {
         getUser: 'getUser'
     },
@@ -40,9 +53,6 @@ export default {
     },
     mounted() {
         this.getCommandes()
-    },
-    created() {
-        this.interval = setInterval(() => this.getCommandes(), 3000);
     },
     methods : {
         async getCommandes() {

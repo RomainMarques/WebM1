@@ -7,20 +7,18 @@
         <div class="form_trip_content">
           <div class="form_trip_from">
             <label>From</label>
-            <select class="select" v-model="s_from" name="destinations_from" id="select_from">
-              <option disabled value="">--Destination--</option>
-              <option value="admin:fr:75056">Paris</option>
-              <option value="admin:fr:69123">Lyon</option>
-            </select>
+            <input class="select" list="citiesFrom" name="from" v-model="s_from" />
+            <datalist id="citiesFrom">
+              <option v-for="(destination,index) in listStation" :key=index :value=destination.name></option>
+            </datalist>
           </div>
 
           <div class="form_trip_to">
             <label>To</label>
-            <select class="select" v-model="s_to" name="destinations_to" id="select_to">
-              <option disabled value="">--Destination--</option>
-              <option value="admin:fr:75056">Paris</option>
-              <option value="admin:fr:69123">Lyon</option>
-            </select>
+            <input class="select" list="citiesTo" name="from" v-model="s_to" />
+            <datalist id="citiesTo">
+              <option v-for="(destination,index) in listStation" :key=index :value=destination.name></option>
+            </datalist>
           </div>
 
           <div class="form_trip_to">
@@ -77,6 +75,7 @@
 import moment from 'moment'
 import { addToCart } from '../services/reservation/reservation.js'
 import { getTrain, getAllTrainsDay } from '@/services/api/SNCF/access.js'
+import json from '@/Util/stationUtil.json'
 
 export default {
     name: "planify-vue",
@@ -91,7 +90,8 @@ export default {
         duration: "",
         trains: null,
         done: false,
-        listPrix : []
+        listPrix : [],
+        listStation: json.stations
       }
     },
     computed: {
@@ -110,13 +110,17 @@ export default {
     },
     methods: {
       async getAllTrainOfDay(){
+        this.done = false
+
         var currentHour = ('0' + new Date().getHours()).slice(-2)
         var currentMinute = ('0' + new Date().getMinutes()).slice(-2)
         var dateFormatted = this.i_date.replace(/-/g,'') + "T" + currentHour + currentMinute // YYYY-MM-DD -> YYYYMMDD
-        console.log(dateFormatted)
         this.trains = "Please wait..."
 
-        getAllTrainsDay(this.s_from, this.s_to, dateFormatted).then((res)=>{
+        const fromAsId = this.listStation.find(station => station.name === this.s_from).value
+        const toAsId = this.listStation.find(station => station.name === this.s_to).value
+
+        getAllTrainsDay(fromAsId, toAsId, dateFormatted).then((res)=>{
             this.trains = res.journeys;
         }).then(()=>{
           this.done = true;
@@ -140,8 +144,6 @@ export default {
       },
       goToTrip(id, dur, dep, arr) {
         //Go to the specific trip page with the corresponding data
-        console.log(dur)
-        console.log(dep)
         this.$router.push({
           name: 'Trip', params: {
             id: id,
@@ -164,7 +166,6 @@ export default {
         }, this.getUser().email)
 
         if (res.status === 200) {
-          console.log('added to cart') //TODO: add a message to the user on the page
           alert('Added to cart !')
         }
       },
@@ -179,10 +180,6 @@ export default {
 </script>
 
 <style scoped>
-
-.heigth-limit{
- /* height: 30px; */
-}
 
 .select {
   box-sizing: border-box;

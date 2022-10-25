@@ -1,7 +1,11 @@
 <template>
     <div>
-        <in-process/>
-        <past-commands/>
+        <in-process
+            @update-reservations="updateReservations"
+        />
+        <past-commands
+            :should-update="shouldUpdate"
+        />
     </div>
 </template>
 
@@ -14,6 +18,19 @@ export default {
     components : {
         InProcess,
         PastCommands
+    },
+    data() {
+        return {
+            shouldUpdate : false
+        }
+    },
+    methods : {
+        updateReservations() {
+            this.shouldUpdate = true
+            setTimeout(() => {
+                this.shouldUpdate = false
+            }, 1000)
+        }
     }
 }
 </script>

@@ -12,8 +12,6 @@
             <div id="sign" v-if='signState !== "none"'>
                 <Sign style="width:100%"
                     :signState="signState"
-                    @signUp="signUp"
-                    @signIn="signIn"
                 />
             </div>
            
@@ -48,12 +46,6 @@ export default {
         },
         signupForm() {
             this.signState = "signup"
-        },
-        signUp(user) {
-            this.$emit("signUp", user)
-        },
-        signIn(user) {
-            this.$emit("signIn", user)
         }
     }
 }

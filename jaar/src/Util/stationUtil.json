@@ -1,0 +1,292 @@
+{
+    "stations": [
+        {
+            "name": "Paris",
+            "value": "admin:fr:75056"
+        },
+        {
+            "name": "Lyon",
+            "value": "admin:fr:69123"
+        },
+        {
+            "name": "Marseille",
+            "value": "admin:fr:13055"
+        },
+        {
+            "name": "Toulouse",
+            "value": "admin:fr:31555"
+        },
+        {
+            "name": "Nice",
+            "value": "admin:fr:06088"
+        },
+        {
+            "name": "Nantes",
+            "value": "admin:fr:44109"
+        },
+        {
+            "name": "Strasbourg",
+            "value": "admin:fr:67482"
+        },
+        {
+            "name": "Montpellier",
+            "value": "admin:fr:34172"
+        },
+        {
+            "name": "Bordeaux",
+            "value": "admin:fr:33063"
+        },
+        {
+            "name": "Lille",
+            "value": "admin:fr:59350"
+        },
+        {
+            "name": "Rennes",
+            "value": "admin:fr:35238"
+        },
+        {
+            "name": "Reims",
+            "value": "admin:fr:51109"
+        },
+        {
+            "name": "Le Havre",
+            "value": "admin:fr:76540"
+        },
+        {
+            "name": "Saint-Étienne",
+            "value": "admin:fr:42186"
+        },
+        {
+            "name": "Toulon",
+            "value": "admin:fr:83069"
+        },
+        {
+            "name": "Grenoble",
+            "value": "admin:fr:38185"
+        },
+        {
+            "name": "Dijon",
+            "value": "admin:fr:21231"
+        },
+        {
+            "name": "Angers",
+            "value": "admin:fr:49007"
+        },
+        {
+            "name": "Nîmes",
+            "value": "admin:fr:30189"
+        },
+        {
+            "name": "Villeurbanne",
+            "value": "admin:fr:69123"
+        },
+        {
+            "name": "Le Mans",
+            "value": "admin:fr:72029"
+        },
+        {
+            "name": "Brest",
+            "value": "admin:fr:29238"
+        },
+        {
+            "name": "Tours",
+            "value": "admin:fr:37279"
+        },
+        {
+            "name": "Amiens",
+            "value": "admin:fr:80021"
+        },
+        {
+            "name": "Limoges",
+            "value": "admin:fr:87085"
+        },
+        {
+            "name": "Perpignan",
+            "value": "admin:fr:66172"
+        },
+        {
+            "name": "Besançon",
+            "value": "admin:fr:25056"
+        },
+        {
+            "name": "Orléans",
+            "value": "admin:fr:45186"
+        },
+        {
+            "name": "Metz",
+            "value": "admin:fr:57050"
+        },
+        {
+            "name": "Rouen",
+            "value": "admin:fr:76109"
+        },
+        {
+            "name": "Mulhouse",
+            "value": "admin:fr:68245"
+        },
+        {
+            "name": "Caen",
+            "value": "admin:fr:14018"
+        },
+        {
+            "name": "Nancy",
+            "value": "admin:fr:54395"
+        },
+        {
+            "name": "Saint-Denis",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Argenteuil",
+            "value": "admin:fr:95019"
+        },
+        {
+            "name": "Montreuil",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Roubaix",
+            "value": "admin:fr:59350"
+        },
+        {
+            "name": "Tourcoing",
+            "value": "admin:fr:59350"
+        },
+        {
+            "name": "Avignon",
+            "value": "admin:fr:84007"
+        },
+        {
+            "name": "Boulogne-Billancourt",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Nanterre",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Rueil-Malmaison",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Clermont-Ferrand",
+            "value": "admin:fr:63113"
+        },
+        {
+            "name": "Aulnay-sous-Bois",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Dunkerque",
+            "value": "admin:fr:59350"
+        },
+        {
+            "name": "Versailles",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Asnières-sur-Seine",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Colombes",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Évry",
+            "value": "admin:fr:91001"
+        },
+        {
+            "name": "Aubervilliers",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Antibes",
+            "value": "admin:fr:06088"
+        },
+        {
+            "name": "Saint-Paul",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Cannes",
+            "value": "admin:fr:06088"
+        },
+        {
+            "name": "Pau",
+            "value": "admin:fr:64445"
+        },
+        {
+            "name": "La Rochelle",
+            "value": "admin:fr:17028"
+        },
+        {
+            "name": "Drancy",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Noisy-le-Grand",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Cergy",
+            "value": "admin:fr:95019"
+        },
+        {
+            "name": "Ajaccio",
+            "value": "admin:fr:2A004"
+        },
+        {
+            "name": "Saint-Denis",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Levallois-Perret",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Saint-Maur-des-Fossés",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Antony",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Saint-Martin",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Saint-Quentin",
+            "value": "admin:fr:59350"
+        },
+        {
+            "name": "Clichy",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Bourges",
+            "value": "admin:fr:18009"
+        },
+        {
+            "name": "Épinay-sur-Seine",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Champigny-sur-Marne",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Vitry-sur-Seine",
+            "value": "admin:fr:93055"
+        },
+        {
+            "name": "Neuilly-sur-Seine",
+            "value": "admin:fr:92002"
+        },
+        {
+            "name": "Vénissieux",
+            "value": "admin:fr:69123"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-# jaar
+# jaar-server
 
 ## Project setup
 ```

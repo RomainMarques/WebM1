@@ -47,9 +47,6 @@ export default {
             return this.getUser()
         }
     },
-    created() {
-        this.interval = setInterval(() => this.getPanier(), 3000);
-    },
     mounted() {
         this.getPanier()
     },
@@ -76,8 +73,13 @@ export default {
                 arrival_station : item.arrival_station,
                 price : item.price
             }
-            await addToReservation(t, this.user.email)
-            await removeFromCart(t, this.user.email)
+            const addRes = await addToReservation(t, this.user.email)
+            const removeRes = await removeFromCart(t, this.user.email)
+
+            if (addRes.status == 200 && removeRes.status == 200) {
+                this.getPanier()
+                this.$emit('update-reservations')
+            }
         },
         async cancel(item) {
             const t = {
@@ -86,7 +88,11 @@ export default {
                 departure_station : item.departure_station,
                 arrival_station : item.arrival_station
             }
-            await removeFromCart(t, this.user.email)
+            const res = await removeFromCart(t, this.user.email)
+
+            if (res.status == 200) {
+                this.getPanier()
+            }
         }
     }
 }
